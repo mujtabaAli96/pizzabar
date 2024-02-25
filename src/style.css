@@ -241,3 +241,15 @@ body {
   margin: 0;
   padding: 0;
 }
+.swiper-slide .activeMenu2,.swiper-slide .menu{
+    /* padding: 2px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide .menuicon{
+    width: 45%;
+    height: auto;
+}

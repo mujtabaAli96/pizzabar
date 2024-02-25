@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState,useContext } from "react";
 import { Box, ChakraProvider, flatten, position } from "@chakra-ui/react";
 import { ReactSwipeableViews } from "./Components/ReactSwipeableViews/ReactSwipeableViews";
 
@@ -16,6 +16,7 @@ import Discription from "./Components/Discription";
 import BottomBar from "./Components/BottomBar";
 import MySwiper from "./Components/ReactSwipeableViews/swiper";
 import BottomBar2 from "./Components/BottomBar2";
+import { DataContext } from "./main";
 
 export const Data = [
   {
@@ -71,9 +72,18 @@ export const Data = [
 ]
 
 export default function App() {
-  const [selectedMenu, setSelectedMenu] = useState(1);
+  // const [selectedMenu, setSelectedMenu] = useState(1);
+  const {menu,setMenu,selectedMenu,setSelectedMenu} = useContext(DataContext)
   const [selectType, setType] = useState(1);
   const [videoData, SetVideoData] = useState(Data.filter((item) => selectedMenu == item?.category))
+
+
+  useEffect(()=>{
+    fetch("http://admin.komandapp.com/api/v2/resturant/pizzabar")
+    .then(response => response.json())
+    .then(data => {console.log("dataa :",data.restaurant_data?.categories);setMenu(data?.restaurant_data?.categories)})
+    .catch(error => console.error("Error : ",error));
+  },[])
   function changeMenu(val: any) {
 
     SetVideoData(Data.filter((item: any) => val == item?.category))
@@ -139,7 +149,8 @@ export default function App() {
             </div>
             <BottomBar2 changeMenu={changeMenu} selectedMenu={selectedMenu} />
 
-           <BottomBar changeMenu={changeMenu} selectedMenu={selectedMenu} />
+           <BottomBar setType={setType} changeMenu={changeMenu} selectedMenu={selectedMenu} />
+           
 
           </div>
       }
