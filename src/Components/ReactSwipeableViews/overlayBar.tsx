@@ -27,19 +27,19 @@ interface appProps {
   selectType?: any; // optional prop
   setType?: any;
   videoData: any;
-  index:any;
+  index:number;
   heading:any;
   description:any;
   catName:string;
 }
 
 export default function OverlayBar({ catName,heading,description,selectedMenu, setType, videoData,index }: appProps) {
-  const iconMappings = {
-    0: icon1,
-    1: icon1,
-    2: icon1,
-    3:icon1,
-  }; // Or use a conditional statement to select the icon based on index
+  const iconMappings = [
+   icon1,
+    icon1,
+   icon1,
+    icon1,
+  ]; // Or use a conditional statement to select the icon based on index
 
   const dynamicIcon = iconMappings[index]; 
   return (

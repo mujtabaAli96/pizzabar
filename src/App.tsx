@@ -70,10 +70,16 @@ export const Data = [
     category: 4,
   }
 ]
+// interface DataContextInterface {
+//   menu: any; // Or any appropriate type for your menu items
+//   setMenu: any; // Function type for setMenu
+//   selectedMenu: any; // Or any suitable type for selected menu
+//   setSelectedMenu: any; // Function type for setSelectedMenu
+// }
 
 export default function App() {
   // const [selectedMenu, setSelectedMenu] = useState(1);
-  const {menu,setMenu,selectedMenu,setSelectedMenu} = useContext(DataContext)
+  const {menu,setMenu,selectedMenu,setSelectedMenu} = useContext(DataContext )
   const [selectType, setType] = useState(1);
   const [videoData, SetVideoData] = useState(Data.filter((item) => selectedMenu == item?.category))
 
@@ -95,7 +101,7 @@ export default function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false)
-    }, 1800)
+    }, 1200)
   })
 
   useEffect(() => {
@@ -120,6 +126,7 @@ export default function App() {
   }, []);
   return (
     <ChakraProvider>
+      <div className="onlyMobile" >
       {
         loading ? <div style={{ display: "flex", height: "100vh", zIndex: '9999', background: "#041A17", justifyContent: "center", alignItems: "center", width: "100vw" }}>
           <ClipLoader
@@ -154,6 +161,7 @@ export default function App() {
 
           </div>
       }
+      </div>
     </ChakraProvider>
   );
 }

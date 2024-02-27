@@ -5,7 +5,7 @@ interface appProps {
     selectedMenu?: any;
     setType?:any;
     heading?:any;
-    description:any;
+    description?:any;
 }
 
 export default function Discription({heading,description,selectedMenu,setType}:appProps){

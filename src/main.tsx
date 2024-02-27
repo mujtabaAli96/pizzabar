@@ -4,9 +4,21 @@ import App from "./App";
 import { BrowserRouter,Route,Routes } from "react-router-dom";
 import Cart from "./Cart";
 import CheckoutPage from "./CheckoutPage";
-import "./style.css"
+import "./style.css";
 
-export const DataContext = createContext();
+interface DataContextInterface {
+  menu: any; // Or any appropriate type for your menu items
+  setMenu: any; // Function type for setMenu
+  selectedMenu: any; // Or any suitable type for selected menu
+  setSelectedMenu: any; // Function type for setSelectedMenu
+}
+
+export const DataContext = createContext<DataContextInterface>({
+  menu: [], // Initial value for menu, can be empty array or null depending on your data structure
+  setMenu: () => {}, // Function for setMenu (empty function for now)
+  selectedMenu: null, // Initial value for selectedMenu
+  setSelectedMenu: () => {}, // Function for setSelectedMenu (empty function for now)
+});
 function MainApp(){
   const [menu,setMenu] = useState(null)
   const [selectedMenu, setSelectedMenu] = useState(1);
@@ -14,14 +26,11 @@ function MainApp(){
 
   return(
     <DataContext.Provider value={{menu,setMenu,selectedMenu,setSelectedMenu}}>
-    <BrowserRouter basename="/">
+    <BrowserRouter basename="/pizabar">
       <Routes>
-        
         <Route  path="/cart" element={<Cart/>} /> 
         <Route  path="/checkout" element={<CheckoutPage/>} /> 
         <Route  path="/" element={<App />} /> 
-
-
       </Routes>
     </BrowserRouter>
   </DataContext.Provider>

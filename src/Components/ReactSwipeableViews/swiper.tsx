@@ -61,7 +61,7 @@ export default function MySwiper({ selectedMenu, setType, videoData, setSelected
         // onSwiper={(swiper:any )=>{ console.log("on swiper",swiper)}}
         style={{ background: "#041A17" }}
       >
-         {menu?.map((item) => {
+         {menu?.map((item:any) => {
               return (
         <SwiperSlide>
           <Swiper
@@ -75,13 +75,13 @@ export default function MySwiper({ selectedMenu, setType, videoData, setSelected
             allowTouchMove={true}
             style={{ background: "#041A17" }}
           >
-            {item?.aitems?.map((item2) => {
+            {item?.aitems?.map((item2:any) => {
               return (
 
                 <SwiperSlide>
                   <div >
                     <div >
-                      <OverlayBar catName={item?.name} heading={item2.name} description={item2.description} electedMenu={selectedMenu} setType={setType} index={0} videoData={videoData[0]} />
+                      <OverlayBar catName={item?.name} heading={item2.name} description={item2.description} selectedMenu={selectedMenu} setType={setType} index={0} videoData={videoData[0]} />
                     </div>
 
                     <video
