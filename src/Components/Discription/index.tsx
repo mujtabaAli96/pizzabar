@@ -12,11 +12,11 @@ export default function Discription({heading,description,selectedMenu,setType}:a
     return(
         <div className="description">
                   <div style={{width:"80%"}}>
-                    <div style={{display:"flex",paddingLeft:"5px"}}>
+                    <div style={{display:"flex",paddingLeft:"5px",fontSize:"18px"}}>
                       {/* <div style={{background:"black", height:"30px", width:"30px", borderRadius:"18px",marginRight:"5px"}}></div> */}
                       <b>{heading}</b>
                     </div>
-                    <div style={{marginTop:"0.3rem",textAlign:"left",paddingLeft:"5px"}}>{description.length>100?description.slice(0,100)+"...":description} <span style={{color:"orange"}}>Read More</span></div>
+                    <div style={{marginTop:"0.3rem",textAlign:"left",paddingLeft:"5px",fontSize:"16px"}}>{description.length>100?description.slice(0,100)+"...":description} <span style={{color:"orange"}}>Read More</span></div>
                     {/* <div style={{marginTop:"0.5rem",textAlign:"left",paddingLeft:"5px"}}><h6>${Data?.[selectedMenu]?.price}</h6></div> */}
                   </div>
                   <div style={{width:"20%",display:"flex",alignItems:"center",justifyContent:"center"}}>
