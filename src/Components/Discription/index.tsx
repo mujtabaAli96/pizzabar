@@ -22,7 +22,7 @@ export default function Discription({heading,price,description,selectedMenu,setT
                     <div style={{display:"flex",paddingLeft:"5px",fontSize:"16px"}}>
                       <b>${price}/-</b>
                     </div>
-                    <div style={{marginTop:"0.3rem",textAlign:"left",paddingLeft:"5px",fontSize:"16px"}}>{description.length>45&&!expand?<>{description.slice(0,45)}...<span style={{color:"orange"}} onClick={()=>setExpand(!expand)}>Read More</span></>:<div >{description} <span style={{color:"orange"}} onClick={()=>setExpand(false)}>Show Less</span></div>} </div>
+                    <div style={{marginTop:"0.3rem",textAlign:"left",paddingLeft:"5px",fontSize:"16px"}}>{description.length>45&&!expand?<>{description.slice(0,45)}...<span style={{color:"orange"}} onClick={()=>setExpand(!expand)}>Read More</span></>:<div >{description} {description.length>45?<span style={{color:"orange"}} onClick={()=>setExpand(false)}>Show Less</span>:null}</div>} </div>
                     {/* <div style={{marginTop:"0.5rem",textAlign:"left",paddingLeft:"5px"}}><h6>${Data?.[selectedMenu]?.price}</h6></div> */}
                   </div>
                   <div style={{width:"20%",display:"flex",alignItems:"center",justifyContent:"center"}}>
