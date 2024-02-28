@@ -96,7 +96,8 @@ export default function MySwiper({ selectedMenu, setType, videoData, setSelected
                       autoPlay
                       playsInline
                     >
-                      <source src={Data?.[0]?.videoPath} type="video/mp4" />
+                      {/* <source src={Data?.[0]?.videoPath} type="video/mp4" /> */}
+                      <source src={"https://admin.komandapp.com"+item2?.video_path} type="video/mp4" />
                     </video>
                   </div>
                 </SwiperSlide>
