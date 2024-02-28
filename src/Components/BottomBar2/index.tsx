@@ -7,8 +7,9 @@ import { Swiper as SwiperType } from 'swiper';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 
 import 'swiper/css/pagination';
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Navigation } from "swiper/modules";
+import { DataContext } from "../../main";
 
 
 interface appProps {
@@ -18,6 +19,7 @@ interface appProps {
 
 export default function BottomBar2({changeMenu,selectedMenu}:appProps){
     const [swiper, setSwiper] = useState<SwiperType | null>(null);
+    const { menu } = useContext(DataContext)
 
     return(
         <Swiper
