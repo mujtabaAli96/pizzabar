@@ -60,10 +60,14 @@ html,body{
     margin-top:58vh; */
     padding:1rem 1.5rem;
     width:100%;
-    justify-content:space-between
+    justify-content:space-between;
+    overflow:hidden;
 }
 .descriptionExpand{
-    margin-top:44vh !important;
+    /* margin-top:44vh !important; */
+    margin-bottom:8.5vh;
+    height: 300px;
+    overflow-y: scroll;
 }
 }
 .main-body{
