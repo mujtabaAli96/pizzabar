@@ -17,7 +17,7 @@ interface appProps {
 
 export default function BottomBar({setType,changeMenu,selectedMenu}:appProps){
     return(
-        <div className="onlyMobile" style={{ background: "#041A17", width: "100%", position: "fixed", bottom: "0", height: "6vh", color: "white", display: "flex", alignItems: "center", justifyContent: "space-between", borderRadius: "5px 5px 0 0", padding: "0 5%", zIndex:"2" }}>
+        <div className="onlyMobile" style={{ background: "#041A17", width: "100%", position: "fixed", bottom: "0", height: "6vh", color: "white", display: "flex", alignItems: "center", justifyContent: "space-around", borderRadius: "5px 5px 0 0", padding: "0 5%", zIndex:"2" }}>
           
             <div className={"activeMenu"} onClick={()=>{setType(1)}}><img width={30} src={icon5} /></div>
             <div className={"activeMenu"} onClick={()=>{setType(2)}}>
