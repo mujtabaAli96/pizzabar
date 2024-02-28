@@ -29,8 +29,8 @@ export default function Discription({heading,price,description,selectedMenu,setT
                     {/* <div onClick={()=>setType(2)}>
                       <svg width="35" height="35" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="17" width="20" height="4" rx="2" stroke="#fff" stroke-width="2"></rect><rect x="2" y="10" width="20" height="4" rx="2" stroke="#fff" stroke-width="2"></rect><rect x="2" y="3" width="20" height="4" rx="2" stroke="#fff" stroke-width="2"></rect></svg>
                     </div> */}
-                    <div style={{height:"40px"}} >
-                      <img style={{width:"35px",height:"auto"}} src={icon} />
+                    <div style={{height:"35px"}} >
+                      <img style={{width:"30px",height:"auto"}} src={icon} />
                       {/* <svg width="25" height="25" fill="#00A99D" xmlns="http://www.w3.org/2000/svg"><path clipRule="evenodd" d="M12 21a9 9 0 1 1 0-18 9 9 0 0 1 0 18Z" stroke="#fff" stroke-width="2" strokeLinecap="round" strokeLinejoin="round"></path><path d="M12 7v10M17 12H7" stroke="#fff" stroke-width="2" strokeLinecap="round" strokeLinejoin="round"></path></svg> */}
                     </div>
                     {/* <div style={{paddingTop:"3px"}}>
