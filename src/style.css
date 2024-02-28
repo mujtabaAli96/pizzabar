@@ -38,7 +38,7 @@ html,body{
     bottom: 0;
     /* margin-bottom:7.5vh; */
 
-    margin-top:60vh;
+    /* margin-top:60vh; */
     padding:1rem 2rem;
     width:100%;
     justify-content:space-between
@@ -53,10 +53,11 @@ html,body{
     z-index:1;
     color:white;
     position:absolute;
-    /* bottom:0; */
-    top: 0;
-    /* margin-bottom:7.5vh; */
-    margin-top:58vh;
+    bottom:0;
+    /* margin-bottom:6.5vh; */
+    height: 150px;
+    /* top: 0;
+    margin-top:58vh; */
     padding:1rem 1.5rem;
     width:100%;
     justify-content:space-between
