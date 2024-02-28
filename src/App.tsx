@@ -85,7 +85,7 @@ export default function App() {
 
 
   useEffect(()=>{
-    fetch("http://admin.komandapp.com/api/v2/resturant/pizzabar")
+    fetch("https://admin.komandapp.com/api/v2/resturant/pizzabar")
     .then(response => response.json())
     .then(data => {console.log("dataa :",data.restaurant_data?.categories);setMenu(data?.restaurant_data?.categories)})
     .catch(error => console.error("Error : ",error));

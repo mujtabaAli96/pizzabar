@@ -81,7 +81,7 @@ export default function MySwiper({ selectedMenu, setType, videoData, setSelected
                 <SwiperSlide>
                   <div >
                     <div >
-                      <OverlayBar catName={item?.name} heading={item2.name} description={item2.description} selectedMenu={selectedMenu} setType={setType} index={0} videoData={videoData[0]} />
+                      <OverlayBar catName={item?.name} heading={item2.name} price={item2?.price} description={item2.description} selectedMenu={selectedMenu} setType={setType} index={0} videoData={videoData[0]} />
                     </div>
 
                     <video

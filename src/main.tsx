@@ -26,7 +26,9 @@ function MainApp(){
 
   return(
     <DataContext.Provider value={{menu,setMenu,selectedMenu,setSelectedMenu}}>
-    <BrowserRouter basename="/pizabar">
+    <BrowserRouter 
+    // basename="/pizabar"
+    >
       <Routes>
         <Route  path="/cart" element={<Cart/>} /> 
         <Route  path="/checkout" element={<CheckoutPage/>} /> 

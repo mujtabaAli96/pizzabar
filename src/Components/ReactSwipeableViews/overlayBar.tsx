@@ -31,9 +31,10 @@ interface appProps {
   heading:any;
   description:any;
   catName:string;
+  price:string;
 }
 
-export default function OverlayBar({ catName,heading,description,selectedMenu, setType, videoData,index }: appProps) {
+export default function OverlayBar({ catName,heading,description,price,selectedMenu, setType, videoData,index }: appProps) {
   const iconMappings = [
    icon1,
     icon1,
@@ -54,7 +55,7 @@ export default function OverlayBar({ catName,heading,description,selectedMenu, s
         {/* <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path clipRule="evenodd" d="M16 3.5v2a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5Z" stroke="#fff" stroke-width="2" strokeLinecap="round" strokeLinejoin="round"></path><path d="M16 4h2.967a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h3v0M9 11h6M9 15h3" stroke="#fff" stroke-width="2" strokeLinecap="round" strokeLinejoin="round"></path></svg> */}
         <img style={{width:"35px",height:"30px"}} src={search} />
       </Link>
-      <Discription heading={heading} description={description} selectedMenu={selectedMenu} setType={setType} />
+      <Discription heading={heading} description={description} price={price} selectedMenu={selectedMenu} setType={setType} />
     </div>
                 
   );
