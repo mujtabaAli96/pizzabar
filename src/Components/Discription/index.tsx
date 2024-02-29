@@ -1,6 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { Data } from "../../App";
 import icon from '../../assets/addCart.png';
+import icon2 from '../../assets/added.png';
+
 import "../../style.css";
 import { DataContext } from "../../main";
 interface appProps {
@@ -45,7 +47,8 @@ export default function Discription({heading,price,description,selectedMenu,setT
                     </div> */}
                     <div style={{height:"35px"}} >
                       {isCart?
-                        <svg width="25" height="25" fill="#00A99D" xmlns="http://www.w3.org/2000/svg"><path clipRule="evenodd" d="M12 21a9 9 0 1 1 0-18 9 9 0 0 1 0 18Z" stroke="#fff" stroke-width="2" strokeLinecap="round" strokeLinejoin="round"></path><path d="M12 7v10M17 12H7" stroke="#fff" stroke-width="2" strokeLinecap="round" strokeLinejoin="round"></path></svg>
+                        <img style={{width:"30px",height:"auto"}}  src={icon2} />
+                        // <svg width="25" height="25" fill="#00A99D" xmlns="http://www.w3.org/2000/svg"><path clipRule="evenodd" d="M12 21a9 9 0 1 1 0-18 9 9 0 0 1 0 18Z" stroke="#fff" stroke-width="2" strokeLinecap="round" strokeLinejoin="round"></path><path d="M12 7v10M17 12H7" stroke="#fff" stroke-width="2" strokeLinecap="round" strokeLinejoin="round"></path></svg>
                         :
                         <img style={{width:"30px",height:"auto"}} onClick={()=>handleCartClick()} src={icon} />
                         }
