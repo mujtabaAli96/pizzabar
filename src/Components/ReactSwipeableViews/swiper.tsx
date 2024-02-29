@@ -38,10 +38,19 @@ export default function MySwiper({
 }: appProps) {
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
 
-  const { menu } = useContext(DataContext);
+  const { menu,setMenu, cart,setCart } = useContext(DataContext);
 
   // const swiperSlideCustop = useSwiper();
+const addToCartHandler=(id:number)=>{
+  console.log("cart: ",id)
+  const isExistingItem = cart.some((item:any) => item.id === id);
 
+  // If not existing, add the item to the cart
+  if (!isExistingItem) {
+    setCart((prevCart:any) => [...prevCart, { id }]);
+  }
+  
+}
   const slideTo = (index: any) => {
     if (swiper) {
       swiper?.slideTo(index);
@@ -89,12 +98,14 @@ export default function MySwiper({
                           <OverlayBar
                             catName={item?.name}
                             heading={item2.name}
+                            id={item2?.id}
                             price={item2?.price}
                             description={item2.description}
                             selectedMenu={selectedMenu}
                             setType={setType}
                             index={0}
                             videoData={videoData[0]}
+                            addToCart= {addToCartHandler}
                           />
                         </div>
                         {

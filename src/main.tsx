@@ -11,6 +11,8 @@ interface DataContextInterface {
   setMenu: any; // Function type for setMenu
   selectedMenu: any; // Or any suitable type for selected menu
   setSelectedMenu: any; // Function type for setSelectedMenu
+  cart:any;
+  setCart:any;
 }
 
 export const DataContext = createContext<DataContextInterface>({
@@ -18,14 +20,18 @@ export const DataContext = createContext<DataContextInterface>({
   setMenu: () => {}, // Function for setMenu (empty function for now)
   selectedMenu: null, // Initial value for selectedMenu
   setSelectedMenu: () => {}, // Function for setSelectedMenu (empty function for now)
+  cart:[],
+  setCart: () => {},
+
 });
 function MainApp(){
   const [menu,setMenu] = useState(null)
   const [selectedMenu, setSelectedMenu] = useState(1);
+  const [cart,setCart] = useState([]);
 
 
   return(
-    <DataContext.Provider value={{menu,setMenu,selectedMenu,setSelectedMenu}}>
+    <DataContext.Provider value={{menu,setMenu,selectedMenu,setSelectedMenu,cart,setCart}}>
     <BrowserRouter 
     // basename="/pizabar"
     >

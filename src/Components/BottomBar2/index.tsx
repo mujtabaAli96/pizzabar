@@ -10,6 +10,7 @@ import 'swiper/css/pagination';
 import { useContext, useState } from "react";
 import { Navigation } from "swiper/modules";
 import { DataContext } from "../../main";
+import { Image } from "@chakra-ui/react";
 
 
 interface appProps {
@@ -20,6 +21,8 @@ interface appProps {
 export default function BottomBar2({changeMenu,selectedMenu}:appProps){
     const [swiper, setSwiper] = useState<SwiperType | null>(null);
     const { menu } = useContext(DataContext)
+
+    const srcImg="https://admin.komandapp.com/uploads/category_icons/cat_3.png"
 
     return(
         <Swiper
@@ -32,7 +35,11 @@ export default function BottomBar2({changeMenu,selectedMenu}:appProps){
         >
       {menu?.map((item:any,index:number) => {
               return (
-                <SwiperSlide style={{backgroundColor:"transparent"}}><div className={selectedMenu == index+1 ? "activeMenu2" : "menu"} onClick={() => changeMenu(index+1)}><img className="menuicon" src={icon1} /></div></SwiperSlide>
+                <SwiperSlide style={{backgroundColor:"transparent"}}>
+                    <div className={selectedMenu == index+1 ? "activeMenu2" : "menu"} onClick={() => changeMenu(index+1)}>
+                        <img className="menuicon" src={"https://admin.komandapp.com/"+item?.icon}/>
+                    </div>
+                </SwiperSlide>
               )})}
         {/* <div style={{ background: "transparent", width: "100%", position: "fixed", bottom: "80px", height: "8vh", color: "white", display: "flex", alignItems: "center", justifyContent: "space-evenly", borderRadius: "5px 5px 0 0", padding: "0 5%", zIndex:"2" }}> */}
         {/* <SwiperSlide style={{backgroundColor:"transparent"}}><div className={selectedMenu == 1 ? "activeMenu2" : "menu"} onClick={() => changeMenu(1)}><img className="menuicon" src={icon1} /></div></SwiperSlide>
