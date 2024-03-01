@@ -57,8 +57,8 @@ export default function Discription({
         >
           {description.length > 45 && !expand ? (
             <>
-              {description.slice(0, 45)}...
-              <div
+              {description.slice(0, 45)}...<span onClick={() => setExpand(!expand)} style={{color: "orange"}}>Read More</span>
+              {/* <div
                 style={{
                   color: "orange",
                   height: "20px",
@@ -67,14 +67,16 @@ export default function Discription({
                 }}
                 onClick={() => setExpand(!expand)}
               >
-                <div>Read More</div>
-                <div style={{ display: "flex", alignItems: "flex-end" }}>
+                
+                <div 
+                style={{ display: "flex", alignItems: "flex-end" }}
+                >
                   <img
                     style={{ width: "20px", height: "15px", marginLeft: "5px" }}
                     src={downArrow}
                   />
                 </div>
-              </div>
+              </div> */}
             </>
           ) : (
             <div>
@@ -118,11 +120,13 @@ export default function Discription({
         style={{
           width: "20%",
           display: "flex",
-          alignItems: "top",
+          alignItems: "flex-end",
           justifyContent: "center",
+          
+          bottom:"0"
         }}
       >
-        <div style={{ height: "35px" }}>
+        <div style={{ height:"115px", }}>
           {isCart ? (
             <img style={{ width: "30px", height: "auto" }} src={icon2} />
           ) : (

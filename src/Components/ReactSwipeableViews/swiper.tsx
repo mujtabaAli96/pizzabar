@@ -22,6 +22,7 @@ import { Link } from "react-router-dom";
 import { Data } from "../../App";
 import OverlayBar from "./overlayBar";
 import { DataContext } from "../../main";
+import { string } from "prop-types";
 interface appProps {
   selectedMenu?: any;
   selectType?: any; // optional prop
@@ -38,19 +39,22 @@ export default function MySwiper({
 }: appProps) {
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
 
-  const { menu,setMenu, cart,setCart } = useContext(DataContext);
+  const { menu, setMenu, cart, setCart } = useContext(DataContext);
+  const [currentCategory,setCurrentCategory] = useState(menu?.[0]?.name)
 
-  // const swiperSlideCustop = useSwiper();
-const addToCartHandler=(id:number)=>{
-  console.log("cart: ",id)
-  const isExistingItem = cart.some((item:any) => item.id === id);
-
-  // If not existing, add the item to the cart
-  if (!isExistingItem) {
-    setCart((prevCart:any) => [...prevCart, { id }]);
+  function changeCurrentCategory(id:number){
+    setCurrentCategory(menu?.[id]?.name)
   }
-  
-}
+  // const swiperSlideCustop = useSwiper();
+  const addToCartHandler = (id: number) => {
+    console.log("cart: ", id);
+    const isExistingItem = cart.some((item: any) => item.id === id);
+
+    // If not existing, add the item to the cart
+    if (!isExistingItem) {
+      setCart((prevCart: any) => [...prevCart, { id }]);
+    }
+  };
   const slideTo = (index: any) => {
     if (swiper) {
       swiper?.slideTo(index);
@@ -61,18 +65,37 @@ const addToCartHandler=(id:number)=>{
     slideTo(selectedMenu - 1);
   }, [selectedMenu]);
   return (
-    <><div style={{ display: "flex", flexDirection: "row", zIndex: 12, color: "#00a99d", position: "absolute", marginTop: "1.5rem", width: "100%", height: "auto", justifyContent: "space-around" }}>
-    <Link className="cart-icon" to="/cart" style={{ width: "20%" }}>
-      {/* <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path clipRule="evenodd" d="M16 3.5v2a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5Z" stroke="#fff" stroke-width="2" strokeLinecap="round" strokeLinejoin="round"></path><path d="M16 4h2.967a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h3v0M9 11h6M9 15h3" stroke="#fff" stroke-width="2" strokeLinecap="round" strokeLinejoin="round"></path></svg> */}
-      <img style={{width:"25px",height:"25px"}} src={search} />
-    </Link>
-    <h3 style={{ width: "60%", textAlign: "center",color:'orange' }}>{"pizza"}</h3>
-    <Link className="cart-icon" to="/cart" style={{ width: "20%" }}>
-      {/* <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path clipRule="evenodd" d="M16 3.5v2a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5Z" stroke="#fff" stroke-width="2" strokeLinecap="round" strokeLinejoin="round"></path><path d="M16 4h2.967a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h3v0M9 11h6M9 15h3" stroke="#fff" stroke-width="2" strokeLinecap="round" strokeLinejoin="round"></path></svg> */}
-      <img style={{width:"25px",height:"25px"}} src={search} />
-    </Link>
-    {/* <Discription heading={heading} description={description} price={price} selectedMenu={selectedMenu} setType={setType} addToCart={addToCart} id={id} /> */}
-  </div>
+    <>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          zIndex: 12,
+          color: "#00a99d",
+          position: "absolute",
+          marginTop: "1.5rem",
+          width: "100%",
+          height: "auto",
+          justifyContent: "space-around",
+          top: "0",
+        }}
+      >
+        <Link className="cart-icon" to="/cart" style={{ width: "20%" }}>
+          <img style={{ width: "25px", height: "25px" }} src={search} />
+        </Link>
+        <h4
+          style={{
+            width: "60%",
+            textAlign: "center",
+            color: "orange",
+          }}
+        >
+          {currentCategory}
+        </h4>
+        <Link className="cart-icon" to="/cart" style={{ width: "20%" }}>
+          <img style={{ width: "25px", height: "25px" }} src={search} />
+        </Link>
+      </div>
       <Swiper
         className="mySwiper swiper-h"
         spaceBetween={0}
@@ -82,6 +105,7 @@ const addToCartHandler=(id:number)=>{
         modules={[Pagination]}
         onSlideChange={(swiper: any) => {
           setSelectedMenu(swiper.activeIndex + 1);
+          changeCurrentCategory(swiper?.activeIndex)
         }}
         onSwiper={setSwiper}
         // onSwiper={(swiper:any )=>{ console.log("on swiper",swiper)}}
@@ -101,7 +125,6 @@ const addToCartHandler=(id:number)=>{
                 allowTouchMove={true}
                 style={{ background: "#041A17" }}
               >
-                
                 {item?.aitems?.map((item2: any) => {
                   return (
                     <SwiperSlide>
@@ -117,11 +140,10 @@ const addToCartHandler=(id:number)=>{
                             setType={setType}
                             index={0}
                             videoData={videoData[0]}
-                            addToCart= {addToCartHandler}
+                            addToCart={addToCartHandler}
                           />
                         </div>
-                        {
-                          item2?.video!=""?
+                        {item2?.video != "" ? (
                           <video
                             style={{
                               position: "fixed",
@@ -143,9 +165,12 @@ const addToCartHandler=(id:number)=>{
                               }
                               type="video/mp4"
                             />
-                          </video>:
-                          <img src={"https://admin.komandapp.com" +item2?.logom}></img>
-                        }
+                          </video>
+                        ) : (
+                          <img
+                            src={"https://admin.komandapp.com" + item2?.logom}
+                          ></img>
+                        )}
                       </div>
                     </SwiperSlide>
                   );
