@@ -48,15 +48,13 @@ export default function OverlayBar({ catName,heading,description,price,selectedM
   return (
   
     <div style={{ display: "flex", flexDirection: "row", zIndex: 1, color: "#00a99d", position: "absolute", marginTop: "1.5rem", width: "100%", height: "90%", justifyContent: "space-around" }}>
-      <Link className="cart-icon" to="/cart" style={{ width: "20%" }}>
-        {/* <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path clipRule="evenodd" d="M16 3.5v2a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5Z" stroke="#fff" stroke-width="2" strokeLinecap="round" strokeLinejoin="round"></path><path d="M16 4h2.967a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h3v0M9 11h6M9 15h3" stroke="#fff" stroke-width="2" strokeLinecap="round" strokeLinejoin="round"></path></svg> */}
+      {/* <Link className="cart-icon" to="/cart" style={{ width: "20%" }}>
         <img style={{width:"25px",height:"25px"}} src={dynamicIcon} />
       </Link>
       <h3 style={{ width: "60%", textAlign: "center",color:'orange' }}>{catName}</h3>
       <Link className="cart-icon" to="/cart" style={{ width: "20%" }}>
-        {/* <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path clipRule="evenodd" d="M16 3.5v2a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5Z" stroke="#fff" stroke-width="2" strokeLinecap="round" strokeLinejoin="round"></path><path d="M16 4h2.967a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h3v0M9 11h6M9 15h3" stroke="#fff" stroke-width="2" strokeLinecap="round" strokeLinejoin="round"></path></svg> */}
         <img style={{width:"25px",height:"25px"}} src={search} />
-      </Link>
+      </Link> */}
       <Discription heading={heading} description={description} price={price} selectedMenu={selectedMenu} setType={setType} addToCart={addToCart} id={id} />
     </div>
                 
