@@ -37,7 +37,7 @@ export default function BottomBar2({changeMenu,selectedMenu}:appProps){
               return (
                 <SwiperSlide style={{backgroundColor:"transparent"}}>
                     <div className={selectedMenu == index+1 ? "activeMenu2" : "menu"} onClick={() => changeMenu(index+1)}>
-                        <img className="menuicon" src={"https://admin.komandapp.com/"+item?.icon}/>
+                        <img className="menuicon" src={"https://admin.komandapp.com/uploads/restorants/cat_1.png"}/>
                     </div>
                 </SwiperSlide>
               )})}
