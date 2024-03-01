@@ -54,7 +54,7 @@ html,body{
     color:white;
     position:absolute;
     bottom:0;
-    margin-bottom:7vh;
+    margin-bottom:7.5vh !important;
     height: 150px;
     /* top: 0;
     margin-top:58vh; */
