@@ -28,7 +28,7 @@ export default function BottomBar2({changeMenu,selectedMenu}:appProps){
         <Swiper
             className="mySwiper swiper-h menuBar2 onlyMobile"
             spaceBetween={0}
-            slidesPerView={5}
+            slidesPerView={4}
             modules={[Navigation]}
             navigation={true}
             style={{ background: "transparent", width: "100%", position: "fixed", bottom: "55px", height: "8vh", color: "white", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "5px 5px 0 0", padding: "0 5%", zIndex:"2" }}
@@ -37,7 +37,7 @@ export default function BottomBar2({changeMenu,selectedMenu}:appProps){
               return (
                 <SwiperSlide style={{backgroundColor:"transparent"}}>
                     <div className={selectedMenu == index+1 ? "activeMenu2" : "menu"} onClick={() => changeMenu(index+1)}>
-                        <img className="menuicon" src={"https://admin.komandapp.com/uploads/restorants/cat_1.png"}/>
+                        <img className="menuicon" src={"https://admin.komandapp.com/"+item?.icon}/>
                     </div>
                 </SwiperSlide>
               )})}
