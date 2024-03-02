@@ -39,7 +39,7 @@ export default function MySwiper({
 }: appProps) {
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
 
-  const { menu, setMenu, cart, setCart } = useContext(DataContext);
+  const { menu, setMenu, cart, setCart, restaurant } = useContext(DataContext);
   const [currentCategory,setCurrentCategory] = useState(menu?.[0]?.name)
 
   function changeCurrentCategory(id:number){
@@ -81,7 +81,7 @@ export default function MySwiper({
         }}
       >
         <Link className="cart-icon" to="/cart" style={{ width: "20%" }}>
-          <img style={{ width: "25px", height: "25px" }} src={search} />
+          <img style={{ width: "25px", height: "25px" }} src={"https://admin.komandapp.com/"+restaurant?.logo} alt='Logo' />
         </Link>
         <h4
           style={{

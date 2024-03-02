@@ -45,7 +45,7 @@ export default function Discription({
           <b>{heading}</b>
         </div>
         <div style={{ display: "flex", paddingLeft: "5px", fontSize: "16px" }}>
-          <b>${price}/-</b>
+          <b>${price}</b>
         </div>
         <div
           style={{

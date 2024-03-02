@@ -83,15 +83,13 @@ export default function App() {
   const [selectType, setType] = useState(1);
   const [videoData, SetVideoData] = useState(Data.filter((item) => selectedMenu == item?.category))
 
-
-  useEffect(()=>{
-    fetch("https://admin.komandapp.com/api/v2/resturant/pizzabar")
-    .then(response => response.json())
-    .then(data => {console.log("dataa :",data.restaurant_data?.categories);setMenu(data?.restaurant_data?.categories)})
-    .catch(error => console.error("Error : ",error));
-  },[])
+  // useEffect(()=>{
+  //   fetch("https://admin.komandapp.com/api/v2/resturant/pizzabar")
+  //   .then(response => response.json())
+  //   .then(data => {console.log("dataa :",data.restaurant_data?.categories);setMenu(data?.restaurant_data?.categories)})
+  //   .catch(error => console.error("Error : ",error));
+  // },[])
   function changeMenu(val: any) {
-
     SetVideoData(Data.filter((item: any) => val == item?.category))
     setSelectedMenu(val)
   }
