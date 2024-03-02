@@ -65,7 +65,7 @@ html,body{
 }
 .descriptionExpand{
     /* margin-top:44vh !important; */
-    margin-bottom:8.5vh;
+    margin-bottom:9.5vh;
     height: auto;
     overflow-y: scroll;
 }
