@@ -39,7 +39,7 @@ export default function Discription({
   }
   return (
     <div className={expand ? "descriptionExpand" : "description"}>
-      <div style={{ width: "80%" }}>
+      <div style={{ width: "89%" }}>
         <div style={{ display: "flex", paddingLeft: "5px", fontSize: "18px" }}>
           {/* <div style={{background:"black", height:"30px", width:"30px", borderRadius:"18px",marginRight:"5px"}}></div> */}
           <b>{heading}</b>
@@ -118,7 +118,7 @@ export default function Discription({
       </div>
       <div
         style={{
-          width: "20%",
+          width: "10%",
           display: "flex",
           alignItems: "flex-end",
           justifyContent: "right",
