@@ -121,12 +121,12 @@ export default function Discription({
           width: "20%",
           display: "flex",
           alignItems: "flex-end",
-          justifyContent: "center",
+          justifyContent: "right",
           
           bottom:"0"
         }}
       >
-        <div style={{ height:"115px", }}>
+        <div style={{ height:"115px" }}>
           {isCart ? (
             <img style={{ width: "30px", height: "auto" }} src={icon2} />
           ) : (
