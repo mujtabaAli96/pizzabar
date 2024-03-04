@@ -39,7 +39,7 @@ export default function Discription({
   }
   return (
     <div className={expand ? "descriptionExpand" : "description"}>
-      <div style={{ width: "89%" }}>
+      <div style={{ width: "89%" }} className={expand ? "descriptionInnerExpand" : ""}>
         <div style={{ display: "flex", paddingLeft: "5px", fontSize: "18px" }}>
           {/* <div style={{background:"black", height:"30px", width:"30px", borderRadius:"18px",marginRight:"5px"}}></div> */}
           <b>{heading}</b>
@@ -127,7 +127,7 @@ export default function Discription({
           bottom:"0"
         }}
       >
-        <div  style={{ height:expand?"87px":"115px" }}>
+        <div  style={{ height:expand?"115px":"115px" }}>
           {isCart ? (
             <img style={{ width: "30px", height: "auto" }} src={icon2} />
           ) : (
