@@ -90,7 +90,7 @@ export default function MySwiper({
           zIndex: 12,
           color: "#00a99d",
           position: "absolute",
-          marginTop: "1.5rem",
+          marginTop: "2rem",
           width: "100%",
           height: "auto",
           justifyContent: "space-between",
@@ -98,7 +98,7 @@ export default function MySwiper({
         }}
       >
         <Link className="cart-icon" to="/cart" style={{ width: "20%" }}>
-          <img style={{ width: "25px", height: "25px" }} src={"https://admin.komandapp.com/"+restaurant?.logo} alt='Logo' />
+          <img style={{ width: "35px", height: "35px" }} src={"https://admin.komandapp.com/"+restaurant?.logo} alt='Logo' />
         </Link>
         <AnimatedTitle currentCategory={currentCategory} initialYOffset={-100} animate={true} />
 

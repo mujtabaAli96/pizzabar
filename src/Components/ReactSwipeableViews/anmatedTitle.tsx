@@ -12,12 +12,11 @@ const AnimatedTitle: React.FC<AnimatedTitleProps> = ({
   initialYOffset,
   animate,
 }) => {
-  const [titleY, setTitleY] = useState(initialYOffset);
-  const [animateText,setAnimateText] = useState(animate)
+  // const [titleY, setTitleY] = useState(initialYOffset);
+  const [animateText,setAnimateText] = useState(false)
 
   useEffect(() => {
     // setTitleY(-100); // Reset animation on state change
-    console.log("I am Changed!!")
     setAnimateText(true)
     setTimeout(()=>{
         setAnimateText(false)
