@@ -93,7 +93,7 @@ export default function MySwiper({
           marginTop: "1.5rem",
           width: "100%",
           height: "auto",
-          justifyContent: "space-around",
+          justifyContent: "space-between",
           top: "0",
         }}
       >
@@ -102,9 +102,8 @@ export default function MySwiper({
         </Link>
         <AnimatedTitle currentCategory={currentCategory} initialYOffset={-100} animate={true} />
 
-        {/* <motion.span variants={animationVariants} initial="initial" 
-          exit="exit">
-        <h4
+
+        {/* <h4
           style={{
             // width: "60%",
             textAlign: "center",
@@ -113,8 +112,7 @@ export default function MySwiper({
         >
           
           {currentCategory}
-        </h4>
-        </motion.span> */}
+        </h4> */}
         
         <Link className="cart-icon" to="/cart" style={{ width: "20%" }}>
           <img style={{ width: "25px", height: "25px" }} src={search} />
