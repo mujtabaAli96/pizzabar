@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 
 import "swiper/css/pagination";
 import { useContext, useState } from "react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import { DataContext } from "../../main";
 import { Image } from "@chakra-ui/react";
 
@@ -29,10 +29,14 @@ export default function BottomBar2({ changeMenu, selectedMenu }: appProps) {
     //   spaceBetween={0}
       slidesPerView={4}
       modules={[Navigation]}
+    //   pagination={{ clickable: true }}
+
       navigation={true}
-      
+      observer= {true}
+      observeParents= {true}
+      parallax={true}
       style={{
-        // background: "transparent",
+        background: "transparent",
         width: "100%",
         position: "fixed",
         bottom: "55px",
@@ -69,6 +73,11 @@ export default function BottomBar2({ changeMenu, selectedMenu }: appProps) {
         <SwiperSlide style={{backgroundColor:"transparent"}}>  <div className={selectedMenu == 5 ? "activeMenu2" : "menu"} onClick={() => changeMenu(4)}><img className="menuicon"  src={icon3} /></div></SwiperSlide> */}
 
       {/* </div> */}
+      {/* <div style={{width:"30px", height:"30px"}} className="swiper-button-prev">
+        <img width={"30px"} height={"30px"} src="https://admin.komandapp.com/uploads/category_icons/cheese-cake-01-stroke-sharp.svg"></img>
+      </div>
+    <div className="swiper-button-next"></div> */}
+
     </Swiper>
   );
 }

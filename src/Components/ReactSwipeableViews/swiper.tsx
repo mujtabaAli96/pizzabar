@@ -1,8 +1,9 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useLayoutEffect, useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { Swiper as SwiperType } from "swiper";
 import search from "../../assets/search.png";
+import { delay, motion } from 'framer-motion';
 
 // Import Swiper styles
 import "swiper/css";
@@ -23,6 +24,7 @@ import { Data } from "../../App";
 import OverlayBar from "./overlayBar";
 import { DataContext } from "../../main";
 import { string } from "prop-types";
+import AnimatedTitle from "./anmatedTitle";
 interface appProps {
   selectedMenu?: any;
   selectType?: any; // optional prop
@@ -41,7 +43,20 @@ export default function MySwiper({
 
   const { menu, setMenu, cart, setCart, restaurant } = useContext(DataContext);
   const [currentCategory,setCurrentCategory] = useState(menu?.[0]?.name)
+  // const [titleY, setTitleY] = useState(-5);
 
+  // useEffect(() => {
+  //   setTitleY(0); // Reset animation on state change
+  // }, [currentCategory]);
+
+  // const animationVariants = {
+  //   from: { y: titleY },
+  //   to: { y: 0 }, // Target position (top of the screen)
+  //   transition: { duration: 0.5, ease: 'easeInOut' }, // Customize as desired
+  // };
+  useLayoutEffect(() => {
+    setCurrentCategory(menu?.[0]?.name); // Reset category on initial render
+  }, []);
   function changeCurrentCategory(id:number){
     setCurrentCategory(menu?.[id]?.name)
   }
@@ -64,6 +79,8 @@ export default function MySwiper({
   useEffect(() => {
     slideTo(selectedMenu - 1);
   }, [selectedMenu]);
+ 
+
   return (
     <>
       <div
@@ -83,15 +100,22 @@ export default function MySwiper({
         <Link className="cart-icon" to="/cart" style={{ width: "20%" }}>
           <img style={{ width: "25px", height: "25px" }} src={"https://admin.komandapp.com/"+restaurant?.logo} alt='Logo' />
         </Link>
+        <AnimatedTitle currentCategory={currentCategory} initialYOffset={-100} animate={true} />
+
+        {/* <motion.span variants={animationVariants} initial="initial" 
+          exit="exit">
         <h4
           style={{
-            width: "60%",
+            // width: "60%",
             textAlign: "center",
             color: "orange",
           }}
         >
+          
           {currentCategory}
         </h4>
+        </motion.span> */}
+        
         <Link className="cart-icon" to="/cart" style={{ width: "20%" }}>
           <img style={{ width: "25px", height: "25px" }} src={search} />
         </Link>

@@ -88,6 +88,7 @@ export default function Discription({
                     height: "20px",
                     display: "flex",
                     justifyContent: "center",
+                    paddingLeft:"15px"
                   }}
                   onClick={() => setExpand(false)}
                 >
@@ -126,7 +127,7 @@ export default function Discription({
           bottom:"0"
         }}
       >
-        <div style={{ height:"115px" }}>
+        <div  style={{ height:expand?"95px":"115px" }}>
           {isCart ? (
             <img style={{ width: "30px", height: "auto" }} src={icon2} />
           ) : (
