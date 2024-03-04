@@ -24,7 +24,7 @@ const AnimatedTitle: React.FC<AnimatedTitleProps> = ({
     },300)
   }, [currentCategory]);
 
-  const animationVariants: Motion.AnimateProps['variants'] = {
+  const animationVariants= {
     from: { y: -100,opacity:0 },
     to: { y: 0,opacity:1 },
     // transition: { duration: 0.5, ease: 'easeInOut' }, // Customize as desired
