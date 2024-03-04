@@ -48,7 +48,7 @@ export default function OverlayBar({ catName,heading,description,price,selectedM
   return (
   
     <div 
-    // style={{ display: "flex", flexDirection: "row", zIndex: 1, color: "#00a99d", position: "absolute", marginTop: "1.5rem", width: "100%", height: "90%", justifyContent: "space-around" }}
+    style={{ display: "flex", flexDirection: "row", zIndex: 1, color: "#00a99d", position: "absolute", marginTop: "1.5rem", width: "100%", height: "90%", justifyContent: "space-around" }}
     >
       {/* <Link className="cart-icon" to="/cart" style={{ width: "20%" }}>
         <img style={{width:"25px",height:"25px"}} src={dynamicIcon} />
