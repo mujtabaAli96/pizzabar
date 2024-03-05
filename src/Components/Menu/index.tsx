@@ -26,7 +26,7 @@ export default function Menu({videoData,setType}:appProps){
             </div>
             <div style={{paddingTop:"6rem",overflow:"scroll"}}>
                 {
-                    menu[selectedMenu-1]?.aitems?.map((item:any, index:any)=>(
+                    menu[selectedMenu-1]?.items?.map((item:any, index:any)=>(
                         <>
                         <div className="menu-card">
                             <div className="menu-item">
