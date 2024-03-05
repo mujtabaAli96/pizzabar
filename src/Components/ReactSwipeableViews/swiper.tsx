@@ -90,7 +90,7 @@ export default function MySwiper({
           zIndex: 12,
           color: "#00a99d",
           position: "absolute",
-          marginTop: "2rem",
+          marginTop: "20px",
           width: "100%",
           height: "auto",
           justifyContent: "space-between",
