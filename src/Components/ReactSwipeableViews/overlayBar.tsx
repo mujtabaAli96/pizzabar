@@ -50,7 +50,7 @@ export default function OverlayBar({ catName,heading,description,price,selectedM
   return (
   
     <div 
-    style={{ display: "flex", flexDirection: "column", zIndex: 1, color: "#00a99d", position: "absolute", marginTop: "1.5rem", width: "100%", height: "90%", justifyContent: "space-around" }}
+    style={{ display: "flex", flexDirection: "column", zIndex: 1, color: "#00a99d", position: "absolute", marginTop: "1.5rem", width: "100%", height: "95%", justifyContent: "flex-end" }}
     >
       {/* <Link className="cart-icon" to="/cart" style={{ width: "20%" }}>
         <img style={{width:"25px",height:"25px"}} src={dynamicIcon} />
@@ -63,7 +63,7 @@ export default function OverlayBar({ catName,heading,description,price,selectedM
       <Discription heading={heading} description={description} price={price} selectedMenu={selectedMenu} setType={setType} addToCart={addToCart} id={id} />
 
       </div>
-      <div>
+      <div style={{height:"8vh"}}>
       <BottomBar2 changeMenu={changeMenu} selectedMenu={selectedMenu} />
 
       </div>

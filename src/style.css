@@ -34,9 +34,9 @@ html,body{
     flex-direction:row;
     z-index:1;
     color:white;
-    position:absolute;
-    bottom: 0;
-    margin-bottom:7.5vh;
+    /* position:absolute; */
+    /* bottom: 0; */
+    /* margin-bottom:7.5vh; */
 
     /* margin-top:60vh; */
     padding:1rem 2rem;
@@ -52,9 +52,9 @@ html,body{
     flex-direction:row;
     z-index:1;
     color:white;
-    position:absolute;
-    bottom:0;
-    margin-bottom:6.9dvh !important;
+    /* position:absolute; */
+    /* bottom:0; */
+    /* margin-bottom:6.9dvh !important; */
     height: 150px;
     /* top: 0;
     margin-top:58vh; */
@@ -70,7 +70,7 @@ html,body{
     overflow-y: scroll;
 }
 .descriptionInnerExpand{
-    padding-bottom: 3dvh;
+    /* padding-bottom: 3dvh; */
 }
 }
 .main-body{
