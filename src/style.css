@@ -271,6 +271,7 @@ body {
 .menuBar2 > .swiper-wrapper{
     display: flex;
     width:95%;
+    justify-content: center;
     /* justify-content: space-evenly !important; */
     margin-top: 5%;
 }
