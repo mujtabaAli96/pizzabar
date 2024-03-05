@@ -270,7 +270,7 @@ body {
 }
 .menuBar2 > .swiper-wrapper{
     display: flex;
-    width:100%;
+    width:90%;
     /* justify-content: space-evenly !important; */
     margin-top: 5%;
 }
@@ -304,13 +304,21 @@ body {
   /* text-rendering: auto; */
   /* background-image: url('https://admin.komandapp.com/uploads/category_icons/cheese-cake-01-stroke-sharp.svg'); */
     background-repeat: no-repeat;
-    width: 25px !important;
-    height: 25px !important;
+    width: 30px !important;
+    height: 30px !important;
     z-index: 999;
+    position: absolute;
+    margin-top: 5%;
+    visibility: visible;
 }
 .swiper-button-next{
     background-image: url('./assets/right-arrow.png');
+    right: 0;
 }
 .swiper-button-prev{
     background-image: url('./assets/left-arrow.png');
+    left: 0;
+}
+.swiper-button-disabled{
+    visibility: hidden !important;
 }
