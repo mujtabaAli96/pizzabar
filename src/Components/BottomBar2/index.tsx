@@ -46,6 +46,7 @@ export default function BottomBar2({ changeMenu, selectedMenu }: appProps) {
         borderRadius: "5px 5px 0 0",
         padding: "0 5%",
         zIndex: "2",
+        marginBottom:"0.3rem"
       }}
     >
         {/* <img src={icon1}></img> */}

@@ -63,7 +63,7 @@ export default function OverlayBar({ catName,heading,description,price,selectedM
       <Discription heading={heading} description={description} price={price} selectedMenu={selectedMenu} setType={setType} addToCart={addToCart} id={id} />
 
       </div>
-      <div style={{height:"8vh"}}>
+      <div style={{height:"8.2vh"}}>
       <BottomBar2 changeMenu={changeMenu} selectedMenu={selectedMenu} />
 
       </div>
