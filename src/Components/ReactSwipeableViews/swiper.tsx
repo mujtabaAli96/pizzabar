@@ -147,7 +147,7 @@ export default function MySwiper({
                 allowTouchMove={true}
                 style={{ background: "#121212" }}
               >
-                {item?.aitems?.map((item2: any) => {
+                {item?.items?.map((item2: any) => {
                   return (
                     <SwiperSlide>
                       <div>
