@@ -45,7 +45,7 @@ export default function BottomBar2({ changeMenu, selectedMenu }: appProps) {
         justifyContent: "center",
         borderRadius: "5px 5px 0 0",
         padding: "0 5%",
-        zIndex: "2",
+        zIndex: "92",
         marginBottom:"1rem"
       }}
     >
