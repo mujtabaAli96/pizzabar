@@ -34,9 +34,9 @@ html,body{
     flex-direction:row;
     z-index:1;
     color:white;
-    /* position:absolute; */
+    position:absolute; 
     /* bottom: 0; */
-    /* margin-bottom:7.5vh; */
+    /* margin-bottom:7.5vh;
 
     /* margin-top:60vh; */
     padding:0rem 2rem;
@@ -52,8 +52,8 @@ html,body{
     flex-direction:row;
     z-index:1;
     color:white;
-    /* position:absolute; */
-    /* bottom:0; */
+    position:absolute;
+    bottom:0;
     /* margin-bottom:6.9dvh !important; */
     height: 130px;
     /* top: 0;
@@ -309,7 +309,7 @@ body {
     height: 25px !important;
     z-index: 999;
     position: absolute;
-    margin-top: 5%;
+    margin-top: 5px;
     visibility: visible;
 }
 .swiper-button-next{

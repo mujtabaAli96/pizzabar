@@ -37,7 +37,7 @@ export default function BottomBar2({ changeMenu, selectedMenu }: appProps) {
         background: "transparent",
         width: "100%",
         position: "fixed",
-        // bottom: "55px",
+        bottom: "55px",
         height: "8vh",
         color: "white",
         display: "flex",
@@ -45,8 +45,7 @@ export default function BottomBar2({ changeMenu, selectedMenu }: appProps) {
         justifyContent: "center",
         borderRadius: "5px 5px 0 0",
         padding: "0 5%",
-        zIndex: "92",
-        marginBottom:"1rem"
+        zIndex: "2",
       }}
     >
         {/* <img src={icon1}></img> */}

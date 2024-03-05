@@ -164,7 +164,6 @@ export default function MySwiper({
                             index={0}
                             videoData={videoData[0]}
                             addToCart={addToCartHandler}
-                            changeMenu={setSelectedMenu}
                           />
                         </div>
                         {item2?.video != "" ? (

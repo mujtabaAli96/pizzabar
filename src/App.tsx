@@ -152,7 +152,7 @@ export default function App() {
               }
 
             </div>
-            {/* <BottomBar2 changeMenu={changeMenu} selectedMenu={selectedMenu} /> */}
+            <BottomBar2 changeMenu={changeMenu} selectedMenu={selectedMenu} />
 
            <BottomBar setType={setType} changeMenu={changeMenu} selectedMenu={selectedMenu} />
            
