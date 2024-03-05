@@ -131,7 +131,7 @@ export default function MySwiper({
         }}
         onSwiper={setSwiper}
         // onSwiper={(swiper:any )=>{ console.log("on swiper",swiper)}}
-        style={{ background: "#041A17" }}
+        style={{ background: "#121212" }}
       >
         {menu?.map((item: any) => {
           return (
@@ -145,7 +145,7 @@ export default function MySwiper({
                 }}
                 modules={[Pagination]}
                 allowTouchMove={true}
-                style={{ background: "#041A17" }}
+                style={{ background: "#121212" }}
               >
                 {item?.aitems?.map((item2: any) => {
                   return (

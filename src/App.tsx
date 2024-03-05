@@ -126,7 +126,7 @@ export default function App() {
     <ChakraProvider>
       <div className="onlyMobile" >
       {
-        loading ? <div className="onlyMobile" style={{ display: "flex", height: "100vh", zIndex: '9999', background: "#041A17", justifyContent: "center", alignItems: "center", width: "100vw" }}>
+        loading ? <div className="onlyMobile" style={{ display: "flex", height: "100vh", zIndex: '9999', background: "#121212", justifyContent: "center", alignItems: "center", width: "100vw" }}>
           <ClipLoader
             color={color}
             loading={loading}

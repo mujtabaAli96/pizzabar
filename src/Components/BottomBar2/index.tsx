@@ -1,8 +1,6 @@
-import icon1 from "../../assets/bowl.png";
-import icon2 from "../../assets/corn.png";
-import icon3 from "../../assets/cup.png";
-import icon4 from "../../assets/pizza.png";
-import icon5 from "../../assets/burger.png";
+import icon1 from "../../assets/right-arrow.png";
+import icon2 from "../../assets/left-arrow.png";
+
 import { Swiper as SwiperType } from "swiper";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 
@@ -50,6 +48,7 @@ export default function BottomBar2({ changeMenu, selectedMenu }: appProps) {
         zIndex: "2",
       }}
     >
+        {/* <img src={icon1}></img> */}
       {menu?.map((item: any, index: number) => {
         return (
           <SwiperSlide style={{ backgroundColor: "transparent" }}>

@@ -1,7 +1,7 @@
 html{
     position: fixed;
     height: 100svh;
-    background: #020A09;
+    background: #121212 ;
 
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
@@ -23,7 +23,7 @@ html,body{
 }
 .mobile-responsive{
     height: 100svh;
-    background: #041A17;
+    background: #121212  ;
     width: 100vw;
 
     /* width: 400px;
@@ -74,13 +74,13 @@ html,body{
 }
 }
 .main-body{
-    background: #041A17;
+    background: #121212 ;
     height: 100svh;
 }
 /* @media only screen and (min-width: 600px) {
     .main-body {
       width: 400px;
-      background: #041A17;
+      background: #121212;
     }
   } */
 .activeMenu2{
@@ -113,7 +113,7 @@ html,body{
     padding-top: 6rem;
 }
 .menu-item{
-    background: #041A17;
+    background: #121212;
     border-radius: 15px;
     padding: 1rem;
     width: 90%;
@@ -187,7 +187,7 @@ padding: 1rem;
 
 }
 .cart-btn:hover{
-    background: #041A17;
+    background: #121212;
 }
 .checkout-input{
     margin-top: 1.2rem;
@@ -301,10 +301,16 @@ body {
 }
 .swiper-button-next,
 .swiper-button-prev {
-  text-rendering: auto;
-  background-image: url('https://admin.komandapp.com/uploads/category_icons/cheese-cake-01-stroke-sharp.svg');
-background-repeat: no-repeat;
-width: 30px !important;
-    height: 30px !important;
+  /* text-rendering: auto; */
+  /* background-image: url('https://admin.komandapp.com/uploads/category_icons/cheese-cake-01-stroke-sharp.svg'); */
+    background-repeat: no-repeat;
+    width: 25px !important;
+    height: 25px !important;
     z-index: 999;
+}
+.swiper-button-next{
+    background-image: url('./assets/right-arrow.png');
+}
+.swiper-button-prev{
+    background-image: url('./assets/left-arrow.png');
 }
