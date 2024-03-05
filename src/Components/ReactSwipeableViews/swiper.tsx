@@ -94,6 +94,7 @@ export default function MySwiper({
           width: "100%",
           height: "auto",
           justifyContent: "space-between",
+          alignItems:"center",
           top: "0",
         }}
       >
@@ -163,6 +164,7 @@ export default function MySwiper({
                             index={0}
                             videoData={videoData[0]}
                             addToCart={addToCartHandler}
+                            changeMenu={setSelectedMenu}
                           />
                         </div>
                         {item2?.video != "" ? (

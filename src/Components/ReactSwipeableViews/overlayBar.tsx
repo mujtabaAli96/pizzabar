@@ -22,10 +22,12 @@ import '../../style.css';
 import Discription from '../Discription';
 import { Link } from 'react-router-dom';
 import { Data } from '../../App';
+import BottomBar2 from '../BottomBar2';
 interface appProps {
   selectedMenu?: any;
   selectType?: any; // optional prop
   setType?: any;
+  changeMenu?:any;
   videoData: any;
   index:number;
   heading:any;
@@ -36,7 +38,7 @@ interface appProps {
   id: string | number;
 }
 
-export default function OverlayBar({ catName,heading,description,price,selectedMenu, setType, videoData,index,addToCart,id }: appProps) {
+export default function OverlayBar({ catName,heading,description,price,selectedMenu, setType, videoData,index,addToCart,id,changeMenu }: appProps) {
   // const iconMappings = [
   //  icon1,
   //   icon1,
@@ -48,7 +50,7 @@ export default function OverlayBar({ catName,heading,description,price,selectedM
   return (
   
     <div 
-    style={{ display: "flex", flexDirection: "row", zIndex: 1, color: "#00a99d", position: "absolute", marginTop: "1.5rem", width: "100%", height: "90%", justifyContent: "space-around" }}
+    style={{ display: "flex", flexDirection: "column", zIndex: 1, color: "#00a99d", position: "absolute", marginTop: "1.5rem", width: "100%", height: "90%", justifyContent: "space-around" }}
     >
       {/* <Link className="cart-icon" to="/cart" style={{ width: "20%" }}>
         <img style={{width:"25px",height:"25px"}} src={dynamicIcon} />
@@ -57,7 +59,14 @@ export default function OverlayBar({ catName,heading,description,price,selectedM
       <Link className="cart-icon" to="/cart" style={{ width: "20%" }}>
         <img style={{width:"25px",height:"25px"}} src={search} />
       </Link> */}
+      <div>
       <Discription heading={heading} description={description} price={price} selectedMenu={selectedMenu} setType={setType} addToCart={addToCart} id={id} />
+
+      </div>
+      <div>
+      <BottomBar2 changeMenu={changeMenu} selectedMenu={selectedMenu} />
+
+      </div>
     </div>
                 
   );

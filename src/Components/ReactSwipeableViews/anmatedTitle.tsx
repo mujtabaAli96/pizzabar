@@ -34,6 +34,7 @@ const AnimatedTitle: React.FC<AnimatedTitleProps> = ({
        <h4
           style={{
             // width: "60%",
+            margin:"0",
             textAlign: "center",
             color: "orange",
           }}
