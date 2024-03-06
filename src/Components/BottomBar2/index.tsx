@@ -32,7 +32,7 @@ export default function BottomBar2({ changeMenu, selectedMenu }: appProps) {
   return (
     <Swiper
     onSwiper={setSwiper}
-      className="mySwiper swiper-h menuBar2 onlyMobile"
+      className="mySwiper swiper-h menuBar2 onlyMobile shaded-sectio"
       ref={swiperRef} // Assign Swiper instance to useRef
 
     //   spaceBetween={0}
