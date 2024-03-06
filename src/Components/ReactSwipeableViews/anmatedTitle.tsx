@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { transition } from '@chakra-ui/react';
 
 interface AnimatedTitleProps {
   currentCategory: string;
@@ -25,7 +26,7 @@ const AnimatedTitle: React.FC<AnimatedTitleProps> = ({
 
   const animationVariants= {
     from: { y: -100,opacity:0 },
-    to: { y: 0,opacity:1 },
+    to: { y: 0,opacity:1,transition:{duration:0.5} },
     // transition: { duration: 0.5, ease: 'easeInOut' }, // Customize as desired
   };
 
