@@ -89,16 +89,16 @@ export default function MySwiper({
   return (
     <>
       <div
-        className="webkitMarginClass"
+        // className="webkitMarginClass"
         style={{
           display: "flex",
           flexDirection: "row",
           zIndex: 12,
           color: "#00a99d",
           position: "absolute",
-          marginTop: "20px",
+          // marginTop: "20px",
           width: "100%",
-          height: "auto",
+          height: "80px",
           justifyContent: "space-between",
           alignItems: "center",
           top: "0",
