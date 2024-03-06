@@ -1,9 +1,15 @@
-import React, { useContext, useEffect, useLayoutEffect, useRef, useState } from "react";
+import React, {
+  useContext,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { Swiper as SwiperType } from "swiper";
 import search from "../../assets/search.png";
-import { delay, motion } from 'framer-motion';
+import { delay, motion } from "framer-motion";
 
 // Import Swiper styles
 import "swiper/css";
@@ -40,9 +46,9 @@ export default function MySwiper({
   setSelectedMenu,
 }: appProps) {
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
-
+  const [animateText,setAnimateText] = useState(true)
   const { menu, setMenu, cart, setCart, restaurant } = useContext(DataContext);
-  const [currentCategory,setCurrentCategory] = useState(menu?.[0]?.name)
+  const [currentCategory, setCurrentCategory] = useState(menu?.[0]?.name);
   // const [titleY, setTitleY] = useState(-5);
 
   // useEffect(() => {
@@ -57,8 +63,8 @@ export default function MySwiper({
   useLayoutEffect(() => {
     setCurrentCategory(menu?.[0]?.name); // Reset category on initial render
   }, []);
-  function changeCurrentCategory(id:number){
-    setCurrentCategory(menu?.[id]?.name)
+  function changeCurrentCategory(id: number) {
+    setCurrentCategory(menu?.[id]?.name);
   }
   // const swiperSlideCustop = useSwiper();
   const addToCartHandler = (id: number) => {
@@ -79,7 +85,6 @@ export default function MySwiper({
   useEffect(() => {
     slideTo(selectedMenu - 1);
   }, [selectedMenu]);
- 
 
   return (
     <>
@@ -94,27 +99,23 @@ export default function MySwiper({
           width: "100%",
           height: "auto",
           justifyContent: "space-between",
-          alignItems:"center",
+          alignItems: "center",
           top: "0",
         }}
       >
         <Link className="cart-icon" to="/cart" style={{ width: "20%" }}>
-          <img style={{ width: "35px", height: "35px" }} src={"https://admin.komandapp.com/"+restaurant?.logo} alt='Logo' />
+          <img
+            style={{ width: "35px", height: "35px" }}
+            src={"https://admin.komandapp.com/" + restaurant?.logo}
+            alt="Logo"
+          />
         </Link>
-        <AnimatedTitle currentCategory={currentCategory} initialYOffset={-100} animate={true} />
+        <AnimatedTitle
+          currentCategory={currentCategory}
+          animateText={animateText}
+          setAnimateText={setAnimateText}
+        />
 
-
-        {/* <h4
-          style={{
-            // width: "60%",
-            textAlign: "center",
-            color: "orange",
-          }}
-        >
-          
-          {currentCategory}
-        </h4> */}
-        
         <Link className="cart-icon" to="/cart" style={{ width: "20%" }}>
           <img style={{ width: "25px", height: "25px" }} src={search} />
         </Link>
@@ -127,8 +128,10 @@ export default function MySwiper({
         }}
         modules={[Pagination]}
         onSlideChange={(swiper: any) => {
+          setAnimateText(true)
           setSelectedMenu(swiper.activeIndex + 1);
-          changeCurrentCategory(swiper?.activeIndex)
+          changeCurrentCategory(swiper?.activeIndex);
+         
         }}
         onSwiper={setSwiper}
         // onSwiper={(swiper:any )=>{ console.log("on swiper",swiper)}}

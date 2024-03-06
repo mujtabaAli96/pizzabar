@@ -3,24 +3,24 @@ import { motion } from 'framer-motion';
 
 interface AnimatedTitleProps {
   currentCategory: string;
-  initialYOffset: number;
-  animate:boolean;
+  animateText:boolean;
+  setAnimateText:any;
 }
 
 const AnimatedTitle: React.FC<AnimatedTitleProps> = ({
   currentCategory,
-  initialYOffset,
-  animate,
+  animateText,
+  setAnimateText,
 }) => {
   // const [titleY, setTitleY] = useState(initialYOffset);
-  const [animateText,setAnimateText] = useState(false)
+  // const [animateText,setAnimateText] = useState(false)
 
   useEffect(() => {
     // setTitleY(-100); // Reset animation on state change
-    setAnimateText(true)
+    // setAnimateText(true)
     setTimeout(()=>{
         setAnimateText(false)
-    },300)
+    },100)
   }, [currentCategory]);
 
   const animationVariants= {
@@ -40,7 +40,7 @@ const AnimatedTitle: React.FC<AnimatedTitleProps> = ({
           }}
         >
           
-          {currentCategory}
+          {animateText!=true&&currentCategory}
         </h4>
     </motion.div>
   );

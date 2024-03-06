@@ -35,7 +35,7 @@ html,body{
     z-index:1;
     color:white;
     position:absolute; 
-    /* bottom: 0; */
+    bottom: 0;
     /* margin-bottom:7.5vh;
 
     /* margin-top:60vh; */
@@ -305,8 +305,9 @@ body {
   /* text-rendering: auto; */
   /* background-image: url('https://admin.komandapp.com/uploads/category_icons/cheese-cake-01-stroke-sharp.svg'); */
     background-repeat: no-repeat;
-    width: 25px !important;
-    height: 25px !important;
+    background-size: cover;
+    width: 20px !important;
+    height: 20px !important;
     z-index: 999;
     position: absolute;
     margin-top: 5px;

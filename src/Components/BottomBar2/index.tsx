@@ -25,7 +25,7 @@ export default function BottomBar2({ changeMenu, selectedMenu }: appProps) {
     <Swiper
       className="mySwiper swiper-h menuBar2 onlyMobile"
     //   spaceBetween={0}
-      slidesPerView={4}
+      slidesPerView={5}
       modules={[Navigation]}
     //   pagination={{ clickable: true }}
 
