@@ -98,7 +98,7 @@ export default function MySwiper({
           position: "absolute",
           // marginTop: "20px",
           width: "100%",
-          height: "80px",
+          height: "90px",
           justifyContent: "space-between",
           alignItems: "center",
           top: "0",
