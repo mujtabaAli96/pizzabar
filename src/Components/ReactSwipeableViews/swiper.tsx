@@ -46,7 +46,7 @@ export default function MySwiper({
   setSelectedMenu,
 }: appProps) {
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
-  const [animateText,setAnimateText] = useState(true)
+  const [animateText, setAnimateText] = useState(true);
   const { menu, setMenu, cart, setCart, restaurant } = useContext(DataContext);
   const [currentCategory, setCurrentCategory] = useState(menu?.[0]?.name);
   // const [titleY, setTitleY] = useState(-5);
@@ -89,6 +89,7 @@ export default function MySwiper({
   return (
     <>
       <div
+        className="webkitMarginClass"
         style={{
           display: "flex",
           flexDirection: "row",
@@ -128,10 +129,9 @@ export default function MySwiper({
         }}
         modules={[Pagination]}
         onSlideChange={(swiper: any) => {
-          setAnimateText(true)
+          setAnimateText(true);
           setSelectedMenu(swiper.activeIndex + 1);
           changeCurrentCategory(swiper?.activeIndex);
-         
         }}
         onSwiper={setSwiper}
         // onSwiper={(swiper:any )=>{ console.log("on swiper",swiper)}}

@@ -55,7 +55,7 @@ html,body{
     color:white;
     position:absolute;
     margin-bottom: 1vh;
-    -webkit-margin-after:2.5vh;
+    -webkit-margin-after:2.2vh;
     bottom:0;
     /* margin-bottom:6.9dvh !important; */
     height: 130px;
@@ -326,6 +326,9 @@ body {
 }
 .swiper-button-disabled{
     visibility: hidden !important;
+}
+.webkitMarginClass{
+    -webkit-margin-before:25px !important;
 }
 
 .shaded-section {
