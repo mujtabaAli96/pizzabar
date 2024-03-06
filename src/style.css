@@ -36,6 +36,7 @@ html,body{
     color:white;
     position:absolute; 
     bottom: 0;
+    
     /* margin-bottom:7.5vh;
 
     /* margin-top:60vh; */
@@ -53,6 +54,8 @@ html,body{
     z-index:1;
     color:white;
     position:absolute;
+    margin-bottom: 1vh;
+    -webkit-margin-after:2vh;
     bottom:0;
     /* margin-bottom:6.9dvh !important; */
     height: 130px;
