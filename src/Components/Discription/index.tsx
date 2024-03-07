@@ -73,11 +73,11 @@ export default function Discription({
           ) : (
             <div>
               {description}{" "}
-              {allergens && allergens?.length > 0 && (
-                <div style={{ display: "flex", margin: "10px 0" }}>
+              {allergens && allergens?.length > 0 && 
+                <div style={{ display: "flex",flexDirection:"row", margin: "10px 0", flexWrap: "wrap" ,height:"fit-content"}}>
                   {allergens?.map((item: any) => {
                     return (
-                      <div style={{ display: "flex", width: "50%" }}>
+                      <div style={{ display: "flex", width: "50%", alignItems:"center" }}>
                         <img
                           style={{ width: "30px", height: "30px" }}
                           src={"https://admin.komandapp.com/" + item?.icon_path}
@@ -87,7 +87,7 @@ export default function Discription({
                     );
                   })}
                 </div>
-              )}
+              }
               {description.length > 45 ? (
                 <div
                   style={{
