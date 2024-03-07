@@ -36,7 +36,7 @@ html,body{
     color:white;
     position:absolute; 
     bottom: 0;
-    
+    -webkit-margin-after:2.2vh;
     /* margin-bottom:7.5vh;
 
     /* margin-top:60vh; */
