@@ -15,6 +15,7 @@ interface appProps {
   price?: any;
   addToCart?: any;
   id?: string | number;
+  allergens?: [];
 }
 
 export default function Discription({
@@ -25,6 +26,7 @@ export default function Discription({
   setType,
   addToCart,
   id,
+  allergens,
 }: appProps) {
   const { menu, setMenu, cart, setCart } = useContext(DataContext);
   const [expand, setExpand] = useState(false);
@@ -39,7 +41,10 @@ export default function Discription({
   }
   return (
     <div className={expand ? "descriptionExpand" : "description"}>
-      <div style={{ width: "89%" }} className={expand ? "descriptionInnerExpand" : ""}>
+      <div
+        style={{ width: "89%" }}
+        className={expand ? "descriptionInnerExpand" : ""}
+      >
         <div style={{ display: "flex", paddingLeft: "5px", fontSize: "18px" }}>
           {/* <div style={{background:"black", height:"30px", width:"30px", borderRadius:"18px",marginRight:"5px"}}></div> */}
           <b>{heading}</b>
@@ -57,30 +62,32 @@ export default function Discription({
         >
           {description.length > 45 && !expand ? (
             <>
-              {description.slice(0, 45)}...<span onClick={() => setExpand(!expand)} style={{color: "orange"}}>Read More</span>
-              {/* <div
-                style={{
-                  color: "orange",
-                  height: "20px",
-                  display: "flex",
-                  justifyContent: "center",
-                }}
+              {description.slice(0, 45)}...
+              <span
                 onClick={() => setExpand(!expand)}
+                style={{ color: "orange" }}
               >
-                
-                <div 
-                style={{ display: "flex", alignItems: "flex-end" }}
-                >
-                  <img
-                    style={{ width: "20px", height: "15px", marginLeft: "5px" }}
-                    src={downArrow}
-                  />
-                </div>
-              </div> */}
+                Read More
+              </span>
             </>
           ) : (
             <div>
               {description}{" "}
+              {allergens && allergens?.length > 0 && (
+                <div style={{ display: "flex", margin: "10px 0" }}>
+                  {allergens?.map((item: any) => {
+                    return (
+                      <div style={{ display: "flex", width: "50%" }}>
+                        <img
+                          style={{ width: "30px", height: "30px" }}
+                          src={"https://admin.komandapp.com/" + item?.icon_path}
+                        />
+                        <h6>{item?.title}</h6>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
               {description.length > 45 ? (
                 <div
                   style={{
@@ -88,7 +95,7 @@ export default function Discription({
                     height: "20px",
                     display: "flex",
                     justifyContent: "center",
-                    paddingLeft:"25px"
+                    paddingLeft: "25px",
                   }}
                   onClick={() => setExpand(false)}
                 >
@@ -123,11 +130,11 @@ export default function Discription({
           display: "flex",
           alignItems: "flex-end",
           justifyContent: "right",
-          
-          bottom:"0"
+
+          bottom: "0",
         }}
       >
-        <div  style={{ height:expand?"115px":"115px" }}>
+        <div style={{ height: expand ? "115px" : "115px" }}>
           {isCart ? (
             <img style={{ width: "30px", height: "auto" }} src={icon2} />
           ) : (

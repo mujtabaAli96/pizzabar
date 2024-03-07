@@ -34,9 +34,10 @@ interface appProps {
   price:string;
   addToCart:any;
   id: string | number;
+  allergens:[];
 }
 
-export default function OverlayBar({ catName,heading,description,price,selectedMenu, setType, videoData,index,addToCart,id }: appProps) {
+export default function OverlayBar({ catName,heading,description,price,selectedMenu, setType, videoData,index,addToCart,id,allergens }: appProps) {
   // const iconMappings = [
   //  icon1,
   //   icon1,
@@ -57,7 +58,7 @@ export default function OverlayBar({ catName,heading,description,price,selectedM
       <Link className="cart-icon" to="/cart" style={{ width: "20%" }}>
         <img style={{width:"25px",height:"25px"}} src={search} />
       </Link> */}
-      <Discription heading={heading} description={description} price={price} selectedMenu={selectedMenu} setType={setType} addToCart={addToCart} id={id} />
+      <Discription heading={heading} description={description} price={price} selectedMenu={selectedMenu} setType={setType} addToCart={addToCart} id={id} allergens={allergens} />
     </div>
                 
   );

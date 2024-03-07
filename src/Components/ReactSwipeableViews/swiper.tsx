@@ -162,6 +162,7 @@ export default function MySwiper({
                             id={item2?.id}
                             price={item2?.price}
                             description={item2.description}
+                            allergens={item2?.allergens}
                             selectedMenu={selectedMenu}
                             setType={setType}
                             index={0}
