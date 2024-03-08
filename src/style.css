@@ -278,10 +278,10 @@ body {
     /* justify-content: space-evenly !important; */
     /* margin-top: 5%; */
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 900px) {
     .onlyMobile{
         position: relative;
-        width: 350px !important;
+        width: 400px !important;
     }
     body {
         background: #000000 !important;
