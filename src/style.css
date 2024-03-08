@@ -54,8 +54,8 @@ html,body{
     z-index:1;
     color:white;
     position:absolute;
-    margin-bottom: 0.7vh;
-    -webkit-margin-after:2.2vh;
+    margin-bottom: 0.6vh;
+    -webkit-margin-after:2vh;
     bottom:0;
     /* margin-bottom:6.9dvh !important; */
     height: 130px;
