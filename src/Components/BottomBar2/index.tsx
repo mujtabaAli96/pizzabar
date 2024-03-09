@@ -45,7 +45,7 @@ export default function BottomBar2({ changeMenu, selectedMenu }: appProps) {
       observeParents= {true}
       parallax={true}
       style={{
-        background: "transparent",
+        // background: "transparent",
         width: "100%",
         position: "fixed",
         bottom: "55px",
