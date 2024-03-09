@@ -41,7 +41,7 @@ html,body{
 
     /* margin-top:60vh; */
     color: #121212 ;
-    background-image: linear-gradient(to bottom, rgba(18, 18, 18, 0) 0%, rgba(18, 18, 18, 0.2) 100%);
+    /* background-image: linear-gradient(to bottom, rgba(18, 18, 18, 0) 0%, rgba(18, 18, 18, 0.2) 100%); */
     /* Adjust color values and percentage for desired effect */      
     padding:0rem 2rem;
     width:100%;
