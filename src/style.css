@@ -40,6 +40,9 @@ html,body{
     /* margin-bottom:7.5vh;
 
     /* margin-top:60vh; */
+    color: #121212 ;
+        background-image: linear-gradient(to bottom, rgba(18, 18, 18, 0.01) 0%, rgba(18, 18, 18, 0.2) 100%);
+        /* Adjust color values and percentage for desired effect */      
     padding:0rem 2rem;
     width:100%;
     justify-content:space-between
@@ -69,7 +72,7 @@ html,body{
 @supports (-webkit-appearance: none) {
     /* Target Safari and other WebKit browsers that support -webkit-appearance */
     .description {
-        margin-bottom: 1vh;
+        margin-bottom: 1.2vh;
         -webkit-margin-after:2.4vh;
     }
   }
