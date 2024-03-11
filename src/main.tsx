@@ -34,6 +34,8 @@ function MainApp() {
   const [restaurant, setRestaurant] = useState({});
 
   useEffect(() => {
+    const hostname = window.location.hostname;
+    alert(hostname)
     fetch("https://admin.komandapp.com/api/v2/resturant/pizzabar")
       .then((response) => response.json())
       .then((data) => {

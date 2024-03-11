@@ -40,9 +40,9 @@ html,body{
     /* margin-bottom:7.5vh;
 
     /* margin-top:60vh; */
-    color: #121212 ;
+    /* color: #121212 ; */
     /* background-image: linear-gradient(to bottom, rgba(18, 18, 18, 0.1) 0%, rgba(18, 18, 18, 0.2) 100%); */ 
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 1px 1px 2px #000000;
 
     /* Adjust color values and percentage for desired effect */      
     padding:0rem 2rem;
@@ -350,7 +350,7 @@ body {
     width: 100%; /* Adjust as needed */
     height: 100vh; /* Adjust as needed */
     /* background-image: linear-gradient(to bottom, rgba(18, 18, 18, 0.15) 0%, rgba(18, 18, 18, 0.3) 100%) !important;  */
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 1px 1px 2px #000000;
 
     /* Gradient Overlay with Slight Opacity */
     &::before {
