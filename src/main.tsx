@@ -35,8 +35,9 @@ function MainApp() {
 
   useEffect(() => {
     const hostname = window.location.hostname;
-    alert(hostname)
-    fetch("https://admin.komandapp.com/api/v2/resturant/pizzabar")
+    const resName = hostname.split(".")[0];
+    alert(resName)
+    fetch(`https://admin.komandapp.com/api/v2/resturant/${resName}`)
       .then((response) => response.json())
       .then((data) => {
         console.log("dataa :", data.restaurant_data?.categories);
