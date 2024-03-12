@@ -75,7 +75,7 @@ function MainApp() {
     >
       <BrowserRouter
       // basename="/pizabar"
-      basename={`/restaurant/${resname}`}
+      // basename={`/restaurant/${resname}`}
       >
         <Routes>
           <Route path="/cart" element={<Cart />} />
