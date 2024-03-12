@@ -50,7 +50,7 @@ function MainApp() {
     // const resName = "pizzabar";
 
     alert(resName)
-    fetch(`https://admin.komandapp.com/api/v2/resturant/${resName}`)
+    fetch(`https://admin.komandapp.com/api/v2/resturant/${resname}`)
       .then((response) => response.json())
       .then((data) => {
         console.log("dataa :", data.restaurant_data?.categories);
