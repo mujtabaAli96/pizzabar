@@ -50,7 +50,7 @@ function MainApp() {
     // const resName = "pizzabar";
 
     alert(resName)
-    fetch(`https://admin.komandapp.com/api/v2/resturant/${resname}`)
+    fetch(`https://admin.komandapp.com/api/v2/resturant/${resName}`)
       .then((response) => response.json())
       .then((data) => {
         console.log("dataa :", data.restaurant_data?.categories);
@@ -75,7 +75,8 @@ function MainApp() {
     >
       <BrowserRouter
       // basename="/pizabar"
-      // basename={`/restaurant/${resname}`}
+      // basename={getBasename()}
+      basename={`/restaurant/${resname}`}
       >
         <Routes>
           <Route path="/cart" element={<Cart />} />
