@@ -32,10 +32,23 @@ function MainApp() {
   const [selectedMenu, setSelectedMenu] = useState(1);
   const [cart, setCart] = useState([]);
   const [restaurant, setRestaurant] = useState({});
+  const [resname, setResname] = useState("");
+
+  const getBasename = () => {
+    if (resname) {
+      return `/restaurant/${resname}`;
+    }
+    return "/";
+  };
 
   useEffect(() => {
-    const hostname = window.location.hostname;
-    const resName = hostname.split(".")[0];
+    // const hostname = window.location.hostname;
+    const resName = window.location.pathname.split("/")[2];
+    setResname(resName);
+
+    // const resName = hostname.split(".")[0];
+    // const resName = "pizzabar";
+
     alert(resName)
     fetch(`https://admin.komandapp.com/api/v2/resturant/${resName}`)
       .then((response) => response.json())
@@ -62,6 +75,7 @@ function MainApp() {
     >
       <BrowserRouter
       // basename="/pizabar"
+      basename={`/restaurant/${"pizzabar"}`}
       >
         <Routes>
           <Route path="/cart" element={<Cart />} />
