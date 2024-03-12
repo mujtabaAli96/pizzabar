@@ -4,5 +4,5 @@ import react from "@vitejs/plugin-react";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base:"https://pizzabar.vercel.app/restaurant/pizzabar",
+  // base:"https://iamkashi.com/pizabar/",
 });
