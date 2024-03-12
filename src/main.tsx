@@ -32,7 +32,7 @@ function MainApp() {
   const [selectedMenu, setSelectedMenu] = useState(1);
   const [cart, setCart] = useState([]);
   const [restaurant, setRestaurant] = useState({});
-  const [resname, setResname] = useState("");
+  const [resname, setResname] = useState("pizzabar");
 
   const getBasename = () => {
     if (resname) {
@@ -75,7 +75,7 @@ function MainApp() {
     >
       <BrowserRouter
       // basename="/pizabar"
-      basename={getBasename()}
+      basename={`/restaurant/${resname}`}
       >
         <Routes>
           <Route path="/cart" element={<Cart />} />
