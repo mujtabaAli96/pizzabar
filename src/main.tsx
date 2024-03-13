@@ -44,7 +44,7 @@ function MainApp() {
   useEffect(() => {
     // const hostname = window.location.hostname;
     const resName = window.location.pathname.split("/")[2];
-    // setResname(resName);
+    setResname(resName);
 
     // const resName = hostname.split(".")[0];
     // const resName = "pizzabar";
