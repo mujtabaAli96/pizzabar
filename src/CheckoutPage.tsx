@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./style.css";
 export default function CheckoutPage(){
     return(
-        <div className="mobile-responsive">
+        <div className="mobile-responsive onlyMobile">
             <div style={{display:"flex",flexDirection:"column" , zIndex:"1", color:"#00a99d", position:"absolute",marginTop:"3.5rem",width:"100%", alignItems:"center"}}>
                 <div style={{display:"flex",width:"100%"}}>
                     <Link style={{width:"20%",textAlign:"center"}}  to="/">

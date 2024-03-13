@@ -5,7 +5,7 @@ import "./style.css";
 
 export default function Cart(){
     return(
-        <div className="mobile-responsive">
+        <div className="mobile-responsive onlyMobile">
             <div style={{display:"flex",flexDirection:"row" , zIndex:"1", color:"#00a99d", position:"absolute",marginTop:"3.5rem", justifyContent:"start", width:"100%"}}>
                 <Link to="/" style={{width:"20%",textAlign:"center"}} >
                     <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m11.005 5-8 7 8 7M3.005 12H21" stroke="#fff" stroke-width="2" strokeLinecap="round" strokeLinejoin="round"></path></svg>        
