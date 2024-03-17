@@ -62,7 +62,7 @@ export default function BottomBar2({ changeMenu, selectedMenu }: appProps) {
         {/* <img src={icon1}></img> */}
       {menu?.map((item: any, index: number) => {
         return (
-          <SwiperSlide style={{ backgroundColor: "transparent" }}>
+          <SwiperSlide style={{ backgroundColor: "transparent" }} key={item.id}>
             <div
               className={selectedMenu == index + 1 ? "activeMenu2" : "menu"}
               onClick={() => changeMenu(index + 1)}
