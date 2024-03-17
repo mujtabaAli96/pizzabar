@@ -100,6 +100,9 @@ export default function MySwiper({
     bucket: "your-bucket-name", // replace with your bucket name
     key: "videoKey",
     expires: 60 * 5, // URL expires in 5 minutes
+    allowedOrigins: ["*"],
+    allowedHeaders: ["*"],
+    exposeHeaders: ["*"],
   };
   const S3 = new S3Client({
     region: "auto",
