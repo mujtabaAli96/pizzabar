@@ -56,8 +56,8 @@ appProps) {
   useEffect(() => {
     const handleDownload = async () => {
       try {
-        console.log("cachedVideo :",cachedVideo)
-        if (!cachedVideo) {
+        // console.log("cachedVideo :",cachedVideo)
+        // if (!cachedVideo) {
           const response = await getSignedUrl(
             S3,
             new GetObjectCommand({ Bucket: "komandapp-videos", Key: videoKey }),
@@ -71,7 +71,7 @@ appProps) {
           // localStorage.setItem(videoKey, objectUrl);
           // setCachedVideo(objectUrl);
           // console.log("Video downloaded and cached:", objectUrl);
-        }
+        // }
       } catch (error) {
         console.error("Error downloading video:", error);
       }
