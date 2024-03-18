@@ -80,7 +80,7 @@ appProps) {
   }, []);
   return (
     <>
-      {
+      { cachedVideo!="" &&
         <video
           style={{
             position: "fixed",
