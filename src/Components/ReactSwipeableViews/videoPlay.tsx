@@ -72,7 +72,7 @@ appProps) {
             objectFit: "cover",
             overflow: "hidden",
           }} 
-          loop={true} muted={true} playing={true}
+          loop={true} muted={true} 
            />)
 
           // const blob = await (await fetch(response)).blob();
@@ -91,9 +91,9 @@ appProps) {
     <>
       { videoStream &&
       (
-        <>
+        <div>
         {videoStream}
-        </>
+        </div>
         
       )
       
