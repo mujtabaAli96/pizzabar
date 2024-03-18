@@ -5,12 +5,8 @@ import React, {
   useRef,
   useState,
 } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import { Swiper as SwiperType } from "swiper";
-import search from "../../assets/search.png";
-import { delay, motion } from "framer-motion";
 
+import ReactPlayer from 'react-player'
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -51,7 +47,8 @@ export default function VideoPlayer({
   videoKey,
 }: // videoUrl
 appProps) {
-  const [cachedVideo, setCachedVideo] = useState("");
+  // const [cachedVideo, setCachedVideo] = useState("");
+  const [videoStream,setVideoStream] = useState<any>(null)
 
   useEffect(() => {
     const handleDownload = async () => {
@@ -64,7 +61,19 @@ appProps) {
             { expiresIn: 3600 }
           );
           console.log(response);
-          setCachedVideo(response);
+          // setCachedVideo(response);
+          setVideoStream(<ReactPlayer url={response}
+            width={"100%"}
+            height={"100%"}
+             style={{
+            position: "fixed",
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            overflow: "hidden",
+          }} 
+          loop={true} muted={true} playing={true}
+           />)
 
           // const blob = await (await fetch(response)).blob();
           // const objectUrl = URL.createObjectURL(blob);
@@ -80,26 +89,33 @@ appProps) {
   }, []);
   return (
     <>
-      { cachedVideo!="" &&
-        <video
-          style={{
-            position: "fixed",
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            overflow: "hidden",
-          }}
-          loop
-          muted
-          autoPlay
-          playsInline
-          // onError={(event) => {
-          //   console.error("Error playing video:", event.target.error);
-          // }}
-        >
-          {/* <source src={Data?.[0]?.videoPath} type="video/mp4" /> */}
-          <source src={cachedVideo} type="video/mp4" />
-        </video>
+      { videoStream &&
+      (
+        <>
+        {videoStream}
+        </>
+        
+      )
+      
+        // <video
+        //   style={{
+        //     position: "fixed",
+        //     width: "100%",
+        //     height: "100%",
+        //     objectFit: "cover",
+        //     overflow: "hidden",
+        //   }}
+        //   loop
+        //   muted
+        //   autoPlay
+        //   playsInline
+        //   // onError={(event) => {
+        //   //   console.error("Error playing video:", event.target.error);
+        //   // }}
+        // >
+        //   {/* <source src={Data?.[0]?.videoPath} type="video/mp4" /> */}
+        //   <source src={cachedVideo} type="video/mp4" />
+        // </video>
       }
     </>
   );

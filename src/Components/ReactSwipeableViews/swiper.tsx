@@ -34,12 +34,7 @@ import AnimatedTitle from "./anmatedTitle";
 
 import {
   S3Client,
-  ListBucketsCommand,
-  ListObjectsV2Command,
-  GetObjectCommand,
-  PutObjectCommand,
 } from "@aws-sdk/client-s3";
-import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import VideoPlayer from "./videoPlay";
 interface appProps {
   selectedMenu?: any;

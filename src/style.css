@@ -368,4 +368,8 @@ body {
       z-index: 1; /* Ensure overlay is on top of content */
     }
   }
+
+  .react-player,video {
+    object-fit: cover !important;
+  }
   
