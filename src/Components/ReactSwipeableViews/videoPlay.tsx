@@ -95,7 +95,7 @@ appProps) {
       (
         <div>
         {/* {videoStream} */}
-        <ReactPlayer
+        {/* <ReactPlayer
           url={videoStream}
           width={"100%"}
           height={"100%"}
@@ -108,7 +108,7 @@ appProps) {
           }}
           loop={true}
           muted={true}
-        />
+        /> */}
         </div>
         
       )
