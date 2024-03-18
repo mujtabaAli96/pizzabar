@@ -51,7 +51,7 @@ export default function VideoPlayer({
   videoKey,
 }: // videoUrl
 appProps) {
-  const [cachedVideo, setCachedVideo] = useState(null);
+  const [cachedVideo, setCachedVideo] = useState("");
 
   useEffect(() => {
     const handleDownload = async () => {
@@ -80,7 +80,7 @@ appProps) {
   }, []);
   return (
     <>
-      {cachedVideo && (
+      {
         <video
           style={{
             position: "fixed",
@@ -100,7 +100,7 @@ appProps) {
           {/* <source src={Data?.[0]?.videoPath} type="video/mp4" /> */}
           <source src={cachedVideo} type="video/webm" />
         </video>
-      )}
+      }
     </>
   );
 }
