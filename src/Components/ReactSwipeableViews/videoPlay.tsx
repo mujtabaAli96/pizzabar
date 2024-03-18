@@ -51,9 +51,7 @@ export default function VideoPlayer({
   videoKey,
 }: // videoUrl
 appProps) {
-  const [cachedVideo, setCachedVideo] = useState(
-    localStorage.getItem(videoKey) || null
-  );
+  const [cachedVideo, setCachedVideo] = useState(null);
 
   useEffect(() => {
     const handleDownload = async () => {
@@ -66,17 +64,13 @@ appProps) {
             { expiresIn: 3600 }
           );
           console.log(response);
-          // const blob = await response.blob();
-          const blob = await (await fetch(response)).blob();
+          setCachedVideo(response);
 
-          // Create an object URL from the blob
-          const objectUrl = URL.createObjectURL(blob);
-          const pathLink = objectUrl.replace("blob:","")
-          // Save the object URL in the cache memory
-          localStorage.setItem(videoKey, objectUrl);
-          setCachedVideo(objectUrl);
-          // You can now use the 'objectUrl' to display the video or further process it
-          console.log("Video downloaded and cached:", objectUrl);
+          // const blob = await (await fetch(response)).blob();
+          // const objectUrl = URL.createObjectURL(blob);
+          // localStorage.setItem(videoKey, objectUrl);
+          // setCachedVideo(objectUrl);
+          // console.log("Video downloaded and cached:", objectUrl);
         }
       } catch (error) {
         console.error("Error downloading video:", error);
