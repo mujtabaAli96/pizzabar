@@ -62,18 +62,20 @@ appProps) {
           );
           console.log(response);
           // setCachedVideo(response);
-          setVideoStream(<ReactPlayer url={response}
-            width={"100%"}
-            height={"100%"}
-             style={{
-            position: "fixed",
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            overflow: "hidden",
-          }} 
-          loop={true} muted={true} 
-           />)
+          setVideoStream(response);
+
+          // setVideoStream(<ReactPlayer url={response}
+          //   width={"100%"}
+          //   height={"100%"}
+          //    style={{
+          //   position: "fixed",
+          //   width: "100%",
+          //   height: "100%",
+          //   objectFit: "cover",
+          //   overflow: "hidden",
+          // }} 
+          // loop={true} muted={true} 
+          //  />)
 
           // const blob = await (await fetch(response)).blob();
           // const objectUrl = URL.createObjectURL(blob);
@@ -92,7 +94,21 @@ appProps) {
       { videoStream &&
       (
         <div>
-        {videoStream}
+        {/* {videoStream} */}
+        <ReactPlayer
+          url={videoStream}
+          width={"100%"}
+          height={"100%"}
+          style={{
+            position: "fixed",
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            overflow: "hidden",
+          }}
+          loop={true}
+          muted={true}
+        />
         </div>
         
       )
