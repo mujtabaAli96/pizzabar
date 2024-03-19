@@ -54,6 +54,7 @@ export default function MySwiper({
   const [animateText, setAnimateText] = useState(true);
   const { menu, setMenu, cart, setCart, restaurant } = useContext(DataContext);
   const [currentCategory, setCurrentCategory] = useState(menu?.[0]?.name);
+  const [activeVideo,setActiveVideo]  = useState(0);
   // const [titleY, setTitleY] = useState(-5);
 
   // useEffect(() => {
@@ -169,7 +170,7 @@ export default function MySwiper({
         // onSwiper={(swiper:any )=>{ console.log("on swiper",swiper)}}
         style={{ background: "#121212" }}
       >
-        {menu?.map((item: any) => {
+        {menu?.map((item: any,catIndex: number) => {
           return (
             <SwiperSlide >
               <Swiper
@@ -182,8 +183,11 @@ export default function MySwiper({
                 modules={[Pagination]}
                 allowTouchMove={true}
                 style={{ background: "#121212" }}
+                onSlideChange={(swiper: any) => {
+                  setActiveVideo(swiper.activeIndex );
+                }}
               >
-                {item?.items?.map((item2: any) => {
+                {item?.items?.map((item2: any,index:number) => {
                   return (
                     <SwiperSlide  key={item2._id}>
                       <div>
@@ -202,7 +206,7 @@ export default function MySwiper({
                             addToCart={addToCartHandler}
                           />
                         </div>
-                        {item2?.video != "" ? (
+                        {item2?.video != "" && index==activeVideo && catIndex+1 == selectedMenu  ? (
                           <>
                             {" "}
                             {/* <video
