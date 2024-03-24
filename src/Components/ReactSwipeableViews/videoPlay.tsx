@@ -97,7 +97,7 @@ appProps) {
   }, []);
   return (
     <>
-      {videoStream && (
+      {videoStream.video_path && (
         <div>
           {/* {videoStream} */}
           {/* <ReactPlayer
