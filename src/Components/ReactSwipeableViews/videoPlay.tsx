@@ -105,7 +105,7 @@ appProps) {
       (
         <div>
         {/* {videoStream} */}
-       <ReactPlayer
+       {/* <ReactPlayer
           url={videoStream}
           width={"100%"}
           height={"100%"}
@@ -120,9 +120,9 @@ appProps) {
           loop={true}
           muted={true}
           playing={true}
-        /> 
+        />  */}
 
-{/* <video
+<video
           style={{
             position: "fixed",
             width: "100%",
@@ -137,7 +137,7 @@ appProps) {
    
         >
           <source src={videoStream} type="video/mp4" />
-        </video> */}
+        </video>
         </div>
         
       )
