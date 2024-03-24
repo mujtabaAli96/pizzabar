@@ -228,7 +228,7 @@ export default function MySwiper({
                                   item2?.video_path
                                 }
                                 type="video/mp4"
-                              />
+                              /> 
                             </video> */}
                             <VideoPlayer 
                             // S3={S3}
