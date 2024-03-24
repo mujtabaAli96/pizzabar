@@ -37,13 +37,13 @@ import {
 } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 interface appProps {
-  S3: any;
+  // S3: any;
   // videoUrl:string;
   videoKey: string;
 }
 
 export default function VideoPlayer({
-  S3,
+  // S3,
   videoKey,
 }: // videoUrl
 appProps) {
