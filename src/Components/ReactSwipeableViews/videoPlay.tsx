@@ -101,7 +101,7 @@ appProps) {
       alert("yahoo")
       videoElement.play();
     }
-    },1000)
+    },3000)
   }, []);
   return (
     <>
