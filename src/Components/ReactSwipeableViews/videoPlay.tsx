@@ -94,13 +94,14 @@ appProps) {
       }
     };
     handleDownload();
-    const videoElement:any = videoRef.current;
-    // setTimeout(()=>{
-      if(videoElement ) 
-      {videoElement.play();}
-    // },1000)
     
-
+    setTimeout(()=>{
+    if (videoRef.current) {
+      const videoElement: any = videoRef.current;
+      alert("yahoo")
+      videoElement.play();
+    }
+    },1000)
   }, []);
   return (
     <>
@@ -136,7 +137,7 @@ appProps) {
               muted
               autoPlay
               playsInline
-              ref={videoRef} 
+              ref={videoRef}
             >
               <source src={videoStream?.video_path} type="video/mp4" />
             </video>
