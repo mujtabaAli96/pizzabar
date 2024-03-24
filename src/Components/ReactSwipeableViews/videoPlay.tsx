@@ -53,16 +53,26 @@ appProps) {
   useEffect(() => {
     const handleDownload = async () => {
       try {
+        const options = {method: 'GET', headers: {accept: 'application/json',AccessKey:"bb2e0a16-c4c6-4ff4-9289cd032c52-7bf3-4260"}};
+        const libraryId=220676;
+        const videoId ='833cc510-659e-4fce-90b4-a2ea6a8d8c3b'
+        // 
+        fetch(`https://video.bunnycdn.com/library/${libraryId}/videos/${videoKey}/play`, options)
+  .then(response => response.json())
+  .then(response => {console.log(response)
+    setVideoStream(response.fallbackUrl+"480p.mp4")
+  })
+  .catch(err => console.error(err));
         // console.log("cachedVideo :",cachedVideo)
         // if (!cachedVideo) {
-          const response = await getSignedUrl(
-            S3,
-            new GetObjectCommand({ Bucket: "komandapp-videos", Key: videoKey }),
-            { expiresIn: 3600 }
-          );
-          console.log(response);
+          // const response = await getSignedUrl(
+          //   S3,
+          //   new GetObjectCommand({ Bucket: "komandapp-videos", Key: videoKey }),
+          //   { expiresIn: 3600 }
+          // );
+          // console.log(response);
           // setCachedVideo(response);
-          setVideoStream(response);
+          // setVideoStream(response);
 
           // setVideoStream(<ReactPlayer url={response}
           //   width={"100%"}
@@ -95,7 +105,7 @@ appProps) {
       (
         <div>
         {/* {videoStream} */}
-        {/* <ReactPlayer
+       <ReactPlayer
           url={videoStream}
           width={"100%"}
           height={"100%"}
@@ -106,33 +116,33 @@ appProps) {
             objectFit: "cover",
             overflow: "hidden",
           }}
+          controls
           loop={true}
           muted={true}
           playing={true}
-        /> */}
+        /> 
+
+{/* <video
+          style={{
+            position: "fixed",
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            overflow: "hidden",
+          }}
+          loop
+          muted
+          autoPlay
+          playsInline
+   
+        >
+          <source src={videoStream} type="video/mp4" />
+        </video> */}
         </div>
         
       )
       
-        // <video
-        //   style={{
-        //     position: "fixed",
-        //     width: "100%",
-        //     height: "100%",
-        //     objectFit: "cover",
-        //     overflow: "hidden",
-        //   }}
-        //   loop
-        //   muted
-        //   autoPlay
-        //   playsInline
-        //   // onError={(event) => {
-        //   //   console.error("Error playing video:", event.target.error);
-        //   // }}
-        // >
-        //   {/* <source src={Data?.[0]?.videoPath} type="video/mp4" /> */}
-        //   <source src={cachedVideo} type="video/mp4" />
-        // </video>
+       
       }
     </>
   );
