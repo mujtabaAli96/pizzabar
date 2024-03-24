@@ -116,7 +116,7 @@ appProps) {
           muted={true}
           playing={true}
         />  */}
-          {active ? (
+          {active||true ? (
             <video
               style={{
                 position: "fixed",
