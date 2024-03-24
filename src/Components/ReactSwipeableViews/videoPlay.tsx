@@ -6,92 +6,88 @@ import React, {
   useState,
 } from "react";
 
-import ReactPlayer from 'react-player'
+import ReactPlayer from "react-player";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 
 import "../../style.css";
-import {
-  slideContainerStyle,
-  getSlideStyles,
-  getRandomColor,
-} from "./ReactSwipeableViews.utils";
 
-// import required modules
-import { Pagination } from "swiper/modules";
-import Discription from "../Discription";
-import { Link } from "react-router-dom";
-import { Data } from "../../App";
-import OverlayBar from "./overlayBar";
-import { DataContext } from "../../main";
-import { string } from "prop-types";
-import AnimatedTitle from "./anmatedTitle";
-
-import {
-  S3Client,
-  ListBucketsCommand,
-  ListObjectsV2Command,
-  GetObjectCommand,
-  PutObjectCommand,
-} from "@aws-sdk/client-s3";
-import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 interface appProps {
   // S3: any;
   // videoUrl:string;
   videoKey: string;
+  active: boolean;
 }
 
 export default function VideoPlayer({
   // S3,
   videoKey,
+  active,
 }: // videoUrl
 appProps) {
   // const [cachedVideo, setCachedVideo] = useState("");
-  const [videoStream,setVideoStream] = useState<any>(null)
+  const [videoStream, setVideoStream] = useState<any>({
+    video_path: "",
+    image_path: "",
+  });
 
   useEffect(() => {
     const handleDownload = async () => {
       try {
-        const options = {method: 'GET', headers: {accept: 'application/json',AccessKey:"bb2e0a16-c4c6-4ff4-9289cd032c52-7bf3-4260"}};
-        const libraryId=220676;
-        const videoId ='833cc510-659e-4fce-90b4-a2ea6a8d8c3b'
-        // 
-        fetch(`https://video.bunnycdn.com/library/${libraryId}/videos/${videoKey}/play`, options)
-  .then(response => response.json())
-  .then(response => {console.log(response)
-    setVideoStream(response.fallbackUrl+"480p.mp4")
-  })
-  .catch(err => console.error(err));
+        const options = {
+          method: "GET",
+          headers: {
+            accept: "application/json",
+            AccessKey: "bb2e0a16-c4c6-4ff4-9289cd032c52-7bf3-4260",
+          },
+        };
+        const libraryId = 220676;
+        const videoId = "833cc510-659e-4fce-90b4-a2ea6a8d8c3b";
+        //
+        fetch(
+          `https://video.bunnycdn.com/library/${libraryId}/videos/${videoKey}/play`,
+          options
+        )
+          .then((response) => response.json())
+          .then((response) => {
+            console.log(response);
+            setVideoStream((pre: any) => ({
+              ...pre,
+              video_path: response.fallbackUrl + "480p.mp4",
+              image_path: response?.thumbnailUrl,
+            }));
+          })
+          .catch((err) => console.error(err));
         // console.log("cachedVideo :",cachedVideo)
         // if (!cachedVideo) {
-          // const response = await getSignedUrl(
-          //   S3,
-          //   new GetObjectCommand({ Bucket: "komandapp-videos", Key: videoKey }),
-          //   { expiresIn: 3600 }
-          // );
-          // console.log(response);
-          // setCachedVideo(response);
-          // setVideoStream(response);
+        // const response = await getSignedUrl(
+        //   S3,
+        //   new GetObjectCommand({ Bucket: "komandapp-videos", Key: videoKey }),
+        //   { expiresIn: 3600 }
+        // );
+        // console.log(response);
+        // setCachedVideo(response);
+        // setVideoStream(response);
 
-          // setVideoStream(<ReactPlayer url={response}
-          //   width={"100%"}
-          //   height={"100%"}
-          //    style={{
-          //   position: "fixed",
-          //   width: "100%",
-          //   height: "100%",
-          //   objectFit: "cover",
-          //   overflow: "hidden",
-          // }} 
-          // loop={true} muted={true} 
-          //  />)
+        // setVideoStream(<ReactPlayer url={response}
+        //   width={"100%"}
+        //   height={"100%"}
+        //    style={{
+        //   position: "fixed",
+        //   width: "100%",
+        //   height: "100%",
+        //   objectFit: "cover",
+        //   overflow: "hidden",
+        // }}
+        // loop={true} muted={true}
+        //  />)
 
-          // const blob = await (await fetch(response)).blob();
-          // const objectUrl = URL.createObjectURL(blob);
-          // localStorage.setItem(videoKey, objectUrl);
-          // setCachedVideo(objectUrl);
-          // console.log("Video downloaded and cached:", objectUrl);
+        // const blob = await (await fetch(response)).blob();
+        // const objectUrl = URL.createObjectURL(blob);
+        // localStorage.setItem(videoKey, objectUrl);
+        // setCachedVideo(objectUrl);
+        // console.log("Video downloaded and cached:", objectUrl);
         // }
       } catch (error) {
         console.error("Error downloading video:", error);
@@ -101,11 +97,10 @@ appProps) {
   }, []);
   return (
     <>
-      { videoStream &&
-      (
+      {videoStream && (
         <div>
-        {/* {videoStream} */}
-       {/* <ReactPlayer
+          {/* {videoStream} */}
+          {/* <ReactPlayer
           url={videoStream}
           width={"100%"}
           height={"100%"}
@@ -121,29 +116,36 @@ appProps) {
           muted={true}
           playing={true}
         />  */}
-
-<video
-          style={{
-            position: "fixed",
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            overflow: "hidden",
-          }}
-          loop
-          muted
-          autoPlay
-          playsInline
-   
-        >
-          <source src={videoStream} type="video/mp4" />
-        </video>
+          {active ? (
+            <video
+              style={{
+                position: "fixed",
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                overflow: "hidden",
+              }}
+              loop
+              muted
+              autoPlay
+              playsInline
+            >
+              <source src={videoStream?.video_path} type="video/mp4" />
+            </video>
+          ) : (
+            <img
+              style={{
+                position: "fixed",
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                overflow: "hidden",
+              }}
+              src={videoStream?.image_path}
+            />
+          )}
         </div>
-        
-      )
-      
-       
-      }
+      )}
     </>
   );
 }
