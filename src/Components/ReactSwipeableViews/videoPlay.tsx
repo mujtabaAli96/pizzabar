@@ -27,6 +27,7 @@ export default function VideoPlayer({
 }: // videoUrl
 appProps) {
   // const [cachedVideo, setCachedVideo] = useState("");
+  const videoRef = useRef(null);
   const [videoStream, setVideoStream] = useState<any>({
     video_path: "",
     image_path: "",
@@ -43,7 +44,6 @@ appProps) {
           },
         };
         const libraryId = 220676;
-        const videoId = "833cc510-659e-4fce-90b4-a2ea6a8d8c3b";
         //
         fetch(
           `https://video.bunnycdn.com/library/${libraryId}/videos/${videoKey}/play`,
@@ -94,6 +94,13 @@ appProps) {
       }
     };
     handleDownload();
+    const videoElement:any = videoRef.current;
+    setTimeout(()=>{
+      if(videoElement && !videoElement.playing) 
+      {videoElement.play();}
+    },1000)
+    
+
   }, []);
   return (
     <>
@@ -129,6 +136,7 @@ appProps) {
               muted
               autoPlay
               playsInline
+              ref={videoRef} 
             >
               <source src={videoStream?.video_path} type="video/mp4" />
             </video>
