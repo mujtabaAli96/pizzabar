@@ -95,10 +95,10 @@ appProps) {
     };
     handleDownload();
     const videoElement:any = videoRef.current;
-    setTimeout(()=>{
-      if(videoElement && !videoElement.playing) 
+    // setTimeout(()=>{
+      if(videoElement ) 
       {videoElement.play();}
-    },1000)
+    // },1000)
     
 
   }, []);
