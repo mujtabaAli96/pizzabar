@@ -116,7 +116,7 @@ appProps) {
           muted={true}
           playing={true}
         />  */}
-          {/* {active ? ( */}
+          {active ? (
             <video
               style={{
                 position: "fixed",
@@ -132,7 +132,7 @@ appProps) {
             >
               <source src={videoStream?.video_path} type="video/mp4" />
             </video>
-          {/* ) : (
+          ) : (
             <img
               style={{
                 position: "fixed",
@@ -143,7 +143,7 @@ appProps) {
               }}
               src={videoStream?.image_path}
             />
-          )} */}
+          )}
         </div>
       )}
     </>
