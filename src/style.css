@@ -32,7 +32,7 @@ html,body{
 .descriptionExpand,.description{
     display:flex;
     flex-direction:row;
-    z-index:1;
+    z-index:3;
     color:white;
     position:absolute; 
     bottom: 13vh;
@@ -64,7 +64,7 @@ html,body{
 .descriptionExpand,.description{
     display:flex;
     flex-direction:row;
-    z-index:1;
+    z-index:3;
     color:white;
     position:absolute;
     /* margin-bottom: 0.6vh;
