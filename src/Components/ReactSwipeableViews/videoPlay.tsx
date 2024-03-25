@@ -99,9 +99,10 @@ appProps) {
     if (videoRef.current) {
       const videoElement: any = videoRef.current;
       alert("yahoo")
+      videoElement.suspend();
       videoElement.play();
     }
-    },3000)
+    },2000)
   }, []);
   return (
     <>
