@@ -112,10 +112,10 @@ html,body{
     }
     .ios-specific-description{
         position:absolute;
-        bottom: 160x !important;
+        bottom: 150px !important;
     }
     .ios-specific-description-expand{
-        bottom: 170px !important;
+        bottom: 165px !important;
         padding-bottom: 1vh !important;
         height: auto;
         overflow-y: scroll;
