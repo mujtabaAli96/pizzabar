@@ -111,6 +111,7 @@ html,body{
         overflow-y: scroll; */
     }
     .ios-specific-description{
+        position:absolute;
         bottom: 160x !important;
     }
     .ios-specific-description-expand{
