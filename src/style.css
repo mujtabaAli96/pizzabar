@@ -61,7 +61,7 @@ html,body{
     position:absolute;
     /* margin-bottom: 0.6vh;
     -webkit-margin-after:2vh; */
-    bottom:12vh;
+    bottom:14vh;
     /* margin-bottom:6.9dvh !important; */
     height: 130px;
     /* top: 0;
@@ -74,6 +74,7 @@ html,body{
 @supports (-webkit-appearance: none) {
     /* Target Safari and other WebKit browsers that support -webkit-appearance */
     .description {
+        bottom:16vh;
         /* margin-bottom: 1.2vh;
         -webkit-margin-after:2.4vh; */
     }
@@ -86,6 +87,7 @@ html,body{
     overflow-y: scroll;
 }
 .descriptionInnerExpand{
+    bottom:15vh;
     /* padding-bottom: 3dvh; */
 }
 }
