@@ -29,7 +29,7 @@ html,body{
     /* width: 400px;
     margin-left: auto; */
 }
-.descriptionExpand,.description{
+.descriptionExpand,.description,.ios-specific-description,.ios-specific-description-expand{
     display:flex;
     flex-direction:row;
     z-index:3;
@@ -72,7 +72,7 @@ html,body{
     /* margin-bottom: 0.6vh;
     -webkit-margin-after:2vh; */
     /* bottom:13vh; */
-    bottom: 75px !important;
+    bottom: 80px !important;
     /* margin-bottom:6.9dvh !important; */
     height: 130px;
     /* top: 0;
@@ -111,10 +111,10 @@ html,body{
         overflow-y: scroll; */
     }
     .ios-specific-description{
-        bottom: 130px !important;
+        bottom: 160x !important;
     }
     .ios-specific-description-expand{
-        bottom: 140px !important;
+        bottom: 170px !important;
         padding-bottom: 1vh !important;
         height: auto;
         overflow-y: scroll;
