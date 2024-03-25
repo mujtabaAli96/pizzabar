@@ -98,7 +98,7 @@ appProps) {
     setTimeout(()=>{
     if (videoRef.current) {
       const videoElement: any = videoRef.current;
-      alert("yahoo")
+      // alert("yahoo")
       videoElement.suspend();
       videoElement.play();
     }
