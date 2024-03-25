@@ -35,7 +35,7 @@ html,body{
     z-index:1;
     color:white;
     position:absolute; 
-    bottom: 12vh;
+    bottom: 13vh;
     -webkit-margin-after:2.2vh;
     /* margin-bottom:7.5vh;
 
@@ -61,7 +61,7 @@ html,body{
     position:absolute;
     /* margin-bottom: 0.6vh;
     -webkit-margin-after:2vh; */
-    bottom:12.5vh;
+    bottom:13vh;
     /* margin-bottom:6.9dvh !important; */
     height: 130px;
     /* top: 0;
