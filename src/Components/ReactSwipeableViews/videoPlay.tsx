@@ -100,7 +100,7 @@ appProps) {
       const videoElement: any = videoRef.current;
       // alert("yahoo")
       // videoElement.suspend();
-      videoElement.play();
+      // videoElement.play();
     }
     },2000)
   }, []);
