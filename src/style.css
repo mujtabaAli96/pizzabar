@@ -61,7 +61,7 @@ html,body{
     position:absolute;
     /* margin-bottom: 0.6vh;
     -webkit-margin-after:2vh; */
-    bottom:13vh;
+    bottom:12.5vh;
     /* margin-bottom:6.9dvh !important; */
     height: 130px;
     /* top: 0;
@@ -82,7 +82,7 @@ html,body{
 .descriptionExpand{
     /* margin-top:44vh !important; */
     /* margin-bottom:9.5vh !important; */
-    bottom:14vh;
+    bottom:14.5vh;
     padding-bottom: 1vh !important;
     height: auto;
     overflow-y: scroll;
