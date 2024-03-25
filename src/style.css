@@ -68,7 +68,7 @@ html,body{
     flex-direction:row;
     z-index:3;
     color:white;
-    position:absolute;
+    position:fixed;
     /* margin-bottom: 0.6vh;
     -webkit-margin-after:2vh; */
     /* bottom:13vh; */
@@ -111,11 +111,11 @@ html,body{
         overflow-y: scroll; */
     }
     .ios-specific-description{
-        position:absolute;
-        bottom: 140px !important;
+        position:fixed;
+        bottom: 100px !important;
     }
     .ios-specific-description-expand{
-        bottom: 155px !important;
+        bottom: 110px !important;
         padding-bottom: 1vh !important;
         height: auto;
         overflow-y: scroll;
