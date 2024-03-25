@@ -39,8 +39,13 @@ export default function Discription({
     addToCart(id);
     setIsCart(true);
   }
+  const isIOS = navigator.userAgent.match(/iPhone|iPad|iPod/i);
+  useEffect(()=>{
+    // alert(isIOS)
+  })
+
   return (
-    <div className={expand ? "descriptionExpand" : "description"}>
+    <div className={expand &&isIOS ? "ios-specific-description-expand":expand? "descriptionExpand":isIOS ? "ios-specific-description" : "description"}>
       <div
         style={{ width: "89%" }}
         className={expand ? "descriptionInnerExpand" : ""}

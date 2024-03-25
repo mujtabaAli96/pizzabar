@@ -63,7 +63,7 @@ html,body{
 .mobile-responsive{
     width: 100vw;
 }
-.descriptionExpand,.description{
+.descriptionExpand,.description,.ios-specific-description,.ios-specific-description-expand{
     display:flex;
     flex-direction:row;
     z-index:3;
@@ -72,7 +72,7 @@ html,body{
     /* margin-bottom: 0.6vh;
     -webkit-margin-after:2vh; */
     /* bottom:13vh; */
-    bottom: 71px !important;
+    bottom: 75px !important;
     /* margin-bottom:6.9dvh !important; */
     height: 130px;
     /* top: 0;
@@ -96,7 +96,7 @@ html,body{
     /* Target Safari and other WebKit browsers that support -webkit-appearance */
     .description {
         /* bottom:16vh; */
-        bottom: 130px !important;
+        /* bottom: 130px !important; */
         /* margin-bottom: 1.2vh;
         -webkit-margin-after:2.4vh; */
     }
@@ -104,6 +104,16 @@ html,body{
         /* margin-top:44vh !important; */
         /* margin-bottom:9.5vh !important; */
         /* bottom:14.5vh !important; */
+
+        /* bottom: 140px !important;
+        padding-bottom: 1vh !important;
+        height: auto;
+        overflow-y: scroll; */
+    }
+    .ios-specific-description{
+        bottom: 130px !important;
+    }
+    .ios-specific-description-expand{
         bottom: 140px !important;
         padding-bottom: 1vh !important;
         height: auto;
