@@ -104,6 +104,17 @@ appProps) {
     }
     },2000)
   }, []);
+   function handleVisibility(){
+    if(active)
+    {
+      // return 'none'
+      // const ret = await setTimeout(()=>{return "none"},100)
+      return "none"
+    }
+    else{
+      return "block"
+    }
+  }
   return (
     <>
       {videoStream.video_path && (
@@ -126,6 +137,12 @@ appProps) {
           playing={true}
         />  */}
           {true ? (
+            <>
+             <img
+              style={{display:handleVisibility()}}
+              className="video-thumbnail"
+              src={videoStream?.image_path}
+            />
             <video
               style={{
                 position: "fixed",
@@ -142,6 +159,7 @@ appProps) {
             >
               <source src={videoStream?.video_path} type="video/mp4" />
             </video>
+            </>
           ) : (
             <img
               style={{

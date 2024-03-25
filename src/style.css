@@ -383,4 +383,12 @@ body {
   .react-player,video {
     object-fit: cover !important;
   }
+.video-thumbnail{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    z-index:2;
+}
   
