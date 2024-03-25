@@ -232,7 +232,9 @@ export default function MySwiper({
                             </video> */}
                             <VideoPlayer 
                             // S3={S3}
-                            active={index==activeVideo && catIndex+1 == selectedMenu}
+                            active={
+                              // index==activeVideo && 
+                              catIndex+1 == selectedMenu}
                              videoKey={item2?.video_path} />
                           </>
                         ) : (

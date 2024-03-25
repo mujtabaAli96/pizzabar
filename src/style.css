@@ -35,7 +35,7 @@ html,body{
     z-index:1;
     color:white;
     position:absolute; 
-    bottom: 0;
+    bottom: 12vh;
     -webkit-margin-after:2.2vh;
     /* margin-bottom:7.5vh;
 
