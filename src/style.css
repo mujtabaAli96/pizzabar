@@ -35,7 +35,8 @@ html,body{
     z-index:3;
     color:white;
     position:absolute; 
-    bottom: 13vh;
+    /* bottom: 13vh; */
+    bottom: 110px;
     -webkit-margin-after:2.2vh;
     /* margin-bottom:7.5vh;
 
@@ -52,7 +53,8 @@ html,body{
 .descriptionExpand{
     /* margin-top:44vh !important; */
     /* margin-bottom:9.5vh !important; */
-    bottom:14.5vh !important;
+    /* bottom:14.5vh !important; */
+    bottom: 120px;
     padding-bottom: 1vh !important;
     height: auto;
     overflow-y: scroll;
@@ -69,7 +71,8 @@ html,body{
     position:absolute;
     /* margin-bottom: 0.6vh;
     -webkit-margin-after:2vh; */
-    bottom:13vh;
+    /* bottom:13vh; */
+    bottom: 90px !important;
     /* margin-bottom:6.9dvh !important; */
     height: 130px;
     /* top: 0;
@@ -82,7 +85,8 @@ html,body{
 @supports (-webkit-appearance: none) {
     /* Target Safari and other WebKit browsers that support -webkit-appearance */
     .description {
-        bottom:16vh;
+        /* bottom:16vh; */
+        bottom: 120px !important;
         /* margin-bottom: 1.2vh;
         -webkit-margin-after:2.4vh; */
     }
@@ -90,7 +94,8 @@ html,body{
 .descriptionExpand{
     /* margin-top:44vh !important; */
     /* margin-bottom:9.5vh !important; */
-    bottom:14.5vh !important;
+    /* bottom:14.5vh !important; */
+    bottom: 110px !important;
     padding-bottom: 1vh !important;
     height: auto;
     overflow-y: scroll;
