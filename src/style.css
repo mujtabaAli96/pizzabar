@@ -86,7 +86,7 @@ html,body{
     /* Target Safari and other WebKit browsers that support -webkit-appearance */
     .description {
         /* bottom:16vh; */
-        bottom: 120px !important;
+        bottom: 135px !important;
         /* margin-bottom: 1.2vh;
         -webkit-margin-after:2.4vh; */
     }
