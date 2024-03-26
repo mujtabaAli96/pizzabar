@@ -139,7 +139,7 @@ export default function App() {
           <div
             // className="main-body "
           >
-            <div style={{position:"relative",height:"95vh"}}>
+            <div style={{position:"relative"}}>
               <div style={{ top: "0" }}>
 
                 {
