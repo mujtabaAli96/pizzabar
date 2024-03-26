@@ -36,7 +36,8 @@ html,body{
     z-index:3;
     color:white;
     position:fixed; 
-    bottom: 13dvh;
+    /* bottom: 13dvh; */
+    bottom: 14dvh;
     /* bottom: 70px; */
     -webkit-margin-after:2.2vh;
     /* margin-bottom:7.5vh;
@@ -55,7 +56,8 @@ html,body{
     /* margin-top:44vh !important; */
     /* margin-bottom:9.5vh !important; */
     /* bottom:14.5vh !important; */
-    bottom: 80px;
+    /* bottom: 80px; */
+    bottom: 14dvh;
     padding-bottom: 1vh !important;
     height: auto;
     overflow-y: scroll;
@@ -72,7 +74,7 @@ html,body{
     position:fixed !important;
     /* margin-bottom: 0.6vh;
     -webkit-margin-after:2vh; */
-    bottom:13dvh;
+    bottom: 14dvh;
     /* bottom: 110px !important; */
     /* margin-bottom:6.9dvh !important; */
     height: 130px;
