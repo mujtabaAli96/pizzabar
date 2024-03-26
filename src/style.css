@@ -37,7 +37,7 @@ html,body{
     color:white;
     position:fixed; 
     /* bottom: 13dvh; */
-    bottom: 14dvh;
+    bottom: 15svh;
     /* bottom: 70px; */
     -webkit-margin-after:2.2vh;
     /* margin-bottom:7.5vh;
@@ -57,7 +57,7 @@ html,body{
     /* margin-bottom:9.5vh !important; */
     /* bottom:14.5vh !important; */
     /* bottom: 80px; */
-    bottom: 14dvh;
+    bottom: 15svh;
     padding-bottom: 1vh !important;
     height: auto;
     overflow-y: scroll;
@@ -74,7 +74,7 @@ html,body{
     position:fixed !important;
     /* margin-bottom: 0.6vh;
     -webkit-margin-after:2vh; */
-    bottom: 14dvh;
+    bottom: 15svh;
     /* bottom: 110px !important; */
     /* margin-bottom:6.9dvh !important; */
     height: 130px;
@@ -89,7 +89,7 @@ html,body{
 .descriptionExpand{
     /* margin-top:44vh !important; */
     /* margin-bottom:9.5vh !important; */
-    bottom:14dvh !important;
+    bottom:15svh !important;
     /* bottom: 105px !important; */
     padding-bottom: 1vh !important;
     height: auto;
@@ -123,12 +123,12 @@ html,body{
         /* position:absolute; */
         /* bottom: 130px !important; */
         /* bottom:120px !important;  */
-        bottom: 14dvh;
+        bottom: 15svh;
 
     }
     .ios-specific-description-expand{
         /* bottom: 140px !important; */
-        bottom: 14dvh;
+        bottom: 15svh;
 
         padding-bottom: 1vh !important;
         height: auto;
