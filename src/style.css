@@ -35,7 +35,7 @@ html,body{
     flex-direction:row;
     z-index:3;
     color:white;
-    position:absolute; 
+    position:fixed; 
     /* bottom: 13vh; */
     bottom: 70px;
     -webkit-margin-after:2.2vh;
@@ -69,7 +69,7 @@ html,body{
     flex-direction:row;
     z-index:3;
     color:white;
-    position:fixed;
+    position:fixed !important;
     /* margin-bottom: 0.6vh;
     -webkit-margin-after:2vh; */
     /* bottom:13vh; */

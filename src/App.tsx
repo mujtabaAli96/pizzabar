@@ -139,7 +139,6 @@ export default function App() {
           <div
             // className="main-body "
           >
-            <div style={{position:"relative"}}>
               <div style={{ top: "0" }}>
 
                 {
@@ -151,10 +150,8 @@ export default function App() {
                     :
                     <Menu videoData={videoData} setType={setType} />
                 }
-
               </div>
               <BottomBar2 changeMenu={changeMenu} selectedMenu={selectedMenu} />
-            </div>
            <BottomBar setType={setType} changeMenu={changeMenu} selectedMenu={selectedMenu} />
            
 
