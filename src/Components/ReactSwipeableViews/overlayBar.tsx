@@ -48,7 +48,7 @@ export default function OverlayBar({ catName,heading,description,price,selectedM
   // const dynamicIcon = iconMappings[index]; 
   return (
   
-    < 
+    <div 
     // style={{ display: "flex", flexDirection: "row", zIndex: 1, color: "#00a99d", position: "absolute", width: "100%", height: "80vh", justifyContent: "space-around" }}
     >
       {/* <Link className="cart-icon" to="/cart" style={{ width: "20%" }}>
@@ -59,7 +59,7 @@ export default function OverlayBar({ catName,heading,description,price,selectedM
         <img style={{width:"25px",height:"25px"}} src={search} />
       </Link> */}
       <Discription heading={heading} description={description} price={price} selectedMenu={selectedMenu} setType={setType} addToCart={addToCart} id={id} allergens={allergens} />
-    </>
+    </div>
                 
   );
 }
