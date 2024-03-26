@@ -74,7 +74,7 @@ html,body{
     position:fixed !important;
     /* margin-bottom: 0.6vh;
     -webkit-margin-after:2vh; */
-    bottom: 15svh;
+    bottom: 16svh;
     /* bottom: 110px !important; */
     /* margin-bottom:6.9dvh !important; */
     height: 130px;
@@ -123,12 +123,12 @@ html,body{
         /* position:absolute; */
         /* bottom: 130px !important; */
         /* bottom:120px !important;  */
-        bottom: 18svh;
+        bottom: 16.5svh;
 
     }
     .ios-specific-description-expand{
         /* bottom: 140px !important; */
-        bottom: 15svh;
+        bottom: 17svh;
 
         padding-bottom: 1vh !important;
         height: auto;
