@@ -15,6 +15,7 @@ html{
 
     
 }
+
 html,body{
     touch-action: none;
     -webkit-user-select: none;
@@ -93,6 +94,12 @@ html,body{
     overflow-y: scroll;
 }
 @supports (-webkit-appearance: none) {
+    body {
+        padding: env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left);
+    }
+    .menuBar2{
+        bottom: env(safe-area-inset-bottom) !important;
+    }
     /* Target Safari and other WebKit browsers that support -webkit-appearance */
     .description {
         /* bottom:16vh; */
