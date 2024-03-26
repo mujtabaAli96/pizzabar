@@ -139,21 +139,22 @@ export default function App() {
           <div
             // className="main-body "
           >
-            <div style={{ top: "0" }}>
+            <div style={{position:"relative"}}>
+              <div style={{ top: "0" }}>
 
-              {
-                selectType == 1 ?
-                  <div >
-                    <MySwiper selectedMenu={selectedMenu} setType={setType} selectType={selectType} setSelectedMenu={changeMenu} videoData={videoData}/>
-                    {/* <ReactSwipeableViews selectedMenu={selectedMenu} setSelectedMenu={changeMenu} selectType={selectType} setType={setType} videoData={videoData} /> */}
-                  </div>
-                  :
-                  <Menu videoData={videoData} setType={setType} />
-              }
+                {
+                  selectType == 1 ?
+                    <div >
+                      <MySwiper selectedMenu={selectedMenu} setType={setType} selectType={selectType} setSelectedMenu={changeMenu} videoData={videoData}/>
+                      {/* <ReactSwipeableViews selectedMenu={selectedMenu} setSelectedMenu={changeMenu} selectType={selectType} setType={setType} videoData={videoData} /> */}
+                    </div>
+                    :
+                    <Menu videoData={videoData} setType={setType} />
+                }
 
+              </div>
+              <BottomBar2 changeMenu={changeMenu} selectedMenu={selectedMenu} />
             </div>
-            <BottomBar2 changeMenu={changeMenu} selectedMenu={selectedMenu} />
-
            <BottomBar setType={setType} changeMenu={changeMenu} selectedMenu={selectedMenu} />
            
 
