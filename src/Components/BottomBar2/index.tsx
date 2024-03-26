@@ -47,8 +47,8 @@ export default function BottomBar2({ changeMenu, selectedMenu }: appProps) {
       style={{
         // background: "transparent",
         width: "100%",
-        // position: "fixed",
-        position: "absolute",
+        position: "fixed",
+        // position: "absolute",
         bottom: "55px",
         // bottom: "0",
         height: "8vh",
