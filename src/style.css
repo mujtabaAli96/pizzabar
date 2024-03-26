@@ -119,7 +119,9 @@ html,body{
     }
     .ios-specific-description{
         /* position:absolute; */
-        bottom: 130px !important;
+        /* bottom: 130px !important; */
+        bottom: calc(100px + env(safe-area-inset-bottom)); /* Adjust px value and use env() for safe area */
+
     }
     .ios-specific-description-expand{
         bottom: 140px !important;
