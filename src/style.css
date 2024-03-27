@@ -36,29 +36,16 @@ html,body{
     z-index:3;
     color:white;
     position:fixed; 
-    /* bottom: 13dvh; */
     bottom: 7dvh;
-    /* bottom: 70px; */
-    -webkit-margin-after:2.2dvh;
-    /* margin-bottom:7.5vh;
-
-    /* margin-top:60vh; */
-    /* color: #121212 ; */
-    /* background-image: linear-gradient(to bottom, rgba(18, 18, 18, 0.1) 0%, rgba(18, 18, 18, 0.2) 100%); */ 
+    /* -webkit-margin-after:2.2dvh; */
     text-shadow: 1px 1px 2px #000000;
-
-    /* Adjust color values and percentage for desired effect */      
     padding:0rem 2rem;
     width:100%;
     justify-content:space-between
 }
 .descriptionExpand{
-    /* margin-top:44vh !important; */
-    /* margin-bottom:9.5vh !important; */
-    /* bottom:14.5vh !important; */
-    /* bottom: 80px; */
     bottom: 8dvh;
-    padding-bottom: 1dvh !important;
+    /* padding-bottom: 1dvh !important; */
     height: auto;
     overflow-y: scroll;
 }
@@ -72,14 +59,8 @@ html,body{
     z-index:3;
     color:white;
     position:fixed !important;
-    /* margin-bottom: 0.6vh;
-    -webkit-margin-after:2vh; */
     bottom: 7dvh;
-    /* bottom: 110px !important; */
-    /* margin-bottom:6.9dvh !important; */
     height: 130px;
-    /* top: 0;
-    margin-top:58vh; */
     padding:0.5rem 1.5rem;
     width:100%;
     justify-content:space-between;
@@ -87,50 +68,19 @@ html,body{
 }
 
 .descriptionExpand{
-    /* margin-top:44vh !important; */
-    /* margin-bottom:9.5vh !important; */
     bottom:8dvh !important;
-    /* bottom: 105px !important; */
-    padding-bottom: 1dvh !important;
+    /* padding-bottom: 1dvh !important; */
     height: auto;
     overflow-y: scroll;
 }
 @supports (-webkit-appearance: none) {
-    /* body {
-        padding: env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left);
-    }
-    .menuBar2{
-        bottom: env(safe-area-inset-bottom) !important;
-    } */
-    /* Target Safari and other WebKit browsers that support -webkit-appearance */
-    .description {
-        /* bottom:16vh; */
-        /* bottom: 130px !important; */
-        /* margin-bottom: 1.2vh;
-        -webkit-margin-after:2.4vh; */
-    }
-    .descriptionExpand{
-        /* margin-top:44vh !important; */
-        /* margin-bottom:9.5vh !important; */
-        /* bottom:14.5vh !important; */
 
-        /* bottom: 140px !important;
-        padding-bottom: 1vh !important;
-        height: auto;
-        overflow-y: scroll; */
-    }
     .ios-specific-description{
-        /* position:absolute; */
-        /* bottom: 130px !important; */
-        /* bottom:120px !important;  */
         bottom: 7dvh;
-
     }
     .ios-specific-description-expand{
-        /* bottom: 140px !important; */
         bottom: 8dvh;
-
-        padding-bottom: 1dvh !important;
+        /* padding-bottom: 1dvh !important; */
         height: auto;
         overflow-y: scroll;
     }
