@@ -30,22 +30,28 @@ export default function Discription({
 }: appProps) {
   const { menu, setMenu, cart, setCart } = useContext(DataContext);
   const [expand, setExpand] = useState(false);
-  const [refresh, setRefresh] = useState(false);
   const [isCart, setIsCart] = useState(
     cart?.some((item: number) => item == id)
   );
-  // useEffect(()=>{},[refresh])
   function handleCartClick() {
     addToCart(id);
     setIsCart(true);
   }
   const isIOS = navigator.userAgent.match(/iPhone|iPad|iPod/i);
-  useEffect(()=>{
-    // alert(isIOS)
-  })
+
 
   return (
-    <div className={expand &&isIOS ? "ios-specific-description-expand":expand? "descriptionExpand":isIOS ? "ios-specific-description" : "description"}>
+    <div
+      className={
+        expand && isIOS
+          ? "ios-specific-description-expand"
+          : expand
+          ? "descriptionExpand"
+          : isIOS
+          ? "ios-specific-description"
+          : "description"
+      }
+    >
       <div
         style={{ width: "89%" }}
         className={expand ? "descriptionInnerExpand" : ""}
@@ -65,9 +71,9 @@ export default function Discription({
             fontSize: "16px",
           }}
         >
-          {description.length > 45 && !expand ? (
+          {description?.length > 45 && !expand ? (
             <>
-              {description.slice(0, 45)}...
+              {description?.slice(0, 45)}...
               <span
                 onClick={() => setExpand(!expand)}
                 style={{ color: "orange" }}
@@ -78,11 +84,27 @@ export default function Discription({
           ) : (
             <div>
               {description}{" "}
-              {allergens && allergens?.length > 0 && 
-                <div style={{ display: "flex",flexDirection:"row", margin: "5px 0", flexWrap: "wrap", height:"fit-content"}}>
+              {allergens && allergens?.length > 0 && (
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    margin: "5px 0",
+                    flexWrap: "wrap",
+                    height: "fit-content",
+                  }}
+                >
                   {allergens?.map((item: any) => {
                     return (
-                      <div style={{ display: "flex", width: "50%",gap:"10px", marginBottom:"5px", alignItems:"center" }}>
+                      <div
+                        style={{
+                          display: "flex",
+                          width: "50%",
+                          gap: "10px",
+                          marginBottom: "5px",
+                          alignItems: "center",
+                        }}
+                      >
                         <img
                           style={{ width: "30px", height: "30px" }}
                           src={"https://admin.komandapp.com/" + item?.icon_path}
@@ -92,8 +114,8 @@ export default function Discription({
                     );
                   })}
                 </div>
-              }
-              {description.length > 45 ? (
+              )}
+              {description?.length > 45 ? (
                 <div
                   style={{
                     color: "orange",
@@ -123,11 +145,10 @@ export default function Discription({
               //   <br />
               //   Show Less
               // </span>
-              null}
+              <></>}
             </div>
           )}{" "}
         </div>
-        {/* <div style={{marginTop:"0.5rem",textAlign:"left",paddingLeft:"5px"}}><h6>${Data?.[selectedMenu]?.price}</h6></div> */}
       </div>
       <div
         style={{
