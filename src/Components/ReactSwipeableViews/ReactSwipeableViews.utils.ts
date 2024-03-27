@@ -1,5 +1,5 @@
 export const SIZE = 376;
-export const HEIGHT = '91vh';
+export const HEIGHT = '91dvh';
 
 export const getRandomColor = () =>
   "#041A17"

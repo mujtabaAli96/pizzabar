@@ -39,7 +39,7 @@ html,body{
     /* bottom: 13dvh; */
     bottom: 15dvh;
     /* bottom: 70px; */
-    -webkit-margin-after:2.2vh;
+    -webkit-margin-after:2.2dvh;
     /* margin-bottom:7.5vh;
 
     /* margin-top:60vh; */
@@ -58,7 +58,7 @@ html,body{
     /* bottom:14.5vh !important; */
     /* bottom: 80px; */
     bottom: 15dvh;
-    padding-bottom: 1vh !important;
+    padding-bottom: 1dvh !important;
     height: auto;
     overflow-y: scroll;
 }
@@ -89,9 +89,9 @@ html,body{
 .descriptionExpand{
     /* margin-top:44vh !important; */
     /* margin-bottom:9.5vh !important; */
-    bottom:15dvh !important;
+    bottom:16dvh !important;
     /* bottom: 105px !important; */
-    padding-bottom: 1vh !important;
+    padding-bottom: 1dvh !important;
     height: auto;
     overflow-y: scroll;
 }
@@ -130,7 +130,7 @@ html,body{
         /* bottom: 140px !important; */
         bottom: 17dvh;
 
-        padding-bottom: 1vh !important;
+        padding-bottom: 1dvh !important;
         height: auto;
         overflow-y: scroll;
     }
@@ -284,7 +284,7 @@ video::-webkit-media-controls {
 
   .swiper {
     width: 100%;
-    height: 93.6vh;
+    height: 93.6dvh;
     color:black;   
   }
   
@@ -312,7 +312,7 @@ video::-webkit-media-controls {
   html,
 body {
   position: relative;
-  height: 93.6vh;
+  height: 93.6dvh;
 }
 
 body {
@@ -402,7 +402,7 @@ body {
     position: relative; /* Required for proper background layering */
     background: transparent; /* Base background for transparency */
     width: 100%; /* Adjust as needed */
-    height: 100vh; /* Adjust as needed */
+    height: 100dvh; /* Adjust as needed */
     /* background-image: linear-gradient(to bottom, rgba(18, 18, 18, 0.15) 0%, rgba(18, 18, 18, 0.3) 100%) !important;  */
     text-shadow: 1px 1px 2px #000000;
 
