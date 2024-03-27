@@ -157,10 +157,11 @@ export default function MySwiper({
       <Swiper
         className="mySwiper swiper-h"
         spaceBetween={0}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination]}
+        // pagination={{
+        //   clickable: true,
+        // }}
+        // modules={[Pagination]}
+        
         onSlideChange={(swiper: any) => {
           setAnimateText(true);
           setSelectedMenu(swiper.activeIndex + 1);
