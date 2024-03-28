@@ -37,25 +37,10 @@ export default function Discription({
     addToCart(id);
     setIsCart(true);
   }
-  const isIOS = navigator.userAgent.match(/iPhone|iPad|iPod/i);
-
 
   return (
-    <div
-      className={
-        expand && isIOS
-          ? "ios-specific-description-expand"
-          : expand
-          ? "descriptionExpand"
-          : isIOS
-          ? "ios-specific-description"
-          : "description"
-      }
-    >
-      <div
-        style={{ width: "89%" }}
-        className={expand ? "descriptionInnerExpand" : ""}
-      >
+    <div className={expand ? "descriptionExpand" : "description"}>
+      <div style={{ width: "89%" }}>
         <div style={{ display: "flex", paddingLeft: "5px", fontSize: "18px" }}>
           {/* <div style={{background:"black", height:"30px", width:"30px", borderRadius:"18px",marginRight:"5px"}}></div> */}
           <b>{heading}</b>
@@ -138,14 +123,16 @@ export default function Discription({
                     />
                   </div>
                 </div>
-              ) : // <span
-              //   style={{ color: "orange" }}
-              //   onClick={() => setExpand(false)}
-              // >
-              //   <br />
-              //   Show Less
-              // </span>
-              <></>}
+              ) : (
+                // <span
+                //   style={{ color: "orange" }}
+                //   onClick={() => setExpand(false)}
+                // >
+                //   <br />
+                //   Show Less
+                // </span>
+                <></>
+              )}
             </div>
           )}{" "}
         </div>

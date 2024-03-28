@@ -92,33 +92,6 @@ export default function MySwiper({
     slideTo(selectedMenu - 1);
   }, [selectedMenu]);
 
-  // const params = {
-  //   bucket: "your-bucket-name", // replace with your bucket name
-  //   key: "videoKey",
-  //   expires: 60 * 5, // URL expires in 5 minutes
-  //   allowedOrigins: ["*"],
-  //   allowedHeaders: ["*"],
-  //   exposeHeaders: ["*"],
-  // };
-  // const S3 = new S3Client({
-  //   region: "auto",
-  //   endpoint: `https://79a85a949077e541e721f3c8ce0ffcde.r2.cloudflarestorage.com`,
-  //   credentials: {
-  //     accessKeyId: "dee5a6720c34ed6e9965dc2b9d273ad8",
-  //     secretAccessKey:
-  //       "dd11f9d5606e2bf5b61321c51599c82a500b6d4f11b81b2932cd31ad76d09e72",
-  //   },
-  // });
-  // useEffect(()=>{
-  //   console.log("yahhhho")
-  //   async function check()
-  //   {
-  //     console.log(
-  //       await getSignedUrl(S3, new GetObjectCommand({Bucket: 'komandapp-videos', Key: 'Pizza Bar_Cuatro Quesos.mp4'}), { expiresIn: 3600 })
-  //     )
-  //   }
-  //   check()
-  // },[])
   return (
     <>
       <div
@@ -156,12 +129,7 @@ export default function MySwiper({
       </div>
       <Swiper
         className="mySwiper swiper-h"
-        spaceBetween={0}
-        // pagination={{
-        //   clickable: true,
-        // }}
-        // modules={[Pagination]}
-        
+        spaceBetween={0}        
         onSlideChange={(swiper: any) => {
           setAnimateText(true);
           setSelectedMenu(swiper.activeIndex + 1);
@@ -193,46 +161,26 @@ export default function MySwiper({
                     <SwiperSlide  key={item2._id}>
                       <div>
                         <div>
-                          <OverlayBar
+                          {/* <OverlayBar
                             catName={item?.name}
                             heading={item2.name}
                             id={item2?.id}
                             price={item2?.price}
-                            description={item2.description}
+                            description={item2?.description}
                             allergens={item2?.allergens}
                             selectedMenu={selectedMenu}
                             setType={setType}
                             index={0}
                             videoData={videoData[0]}
                             addToCart={addToCartHandler}
-                          />
+                          /> */}
+                          <Discription heading={item2.name} description={item2?.description} price={item2?.price} selectedMenu={selectedMenu} setType={setType} addToCart={addToCartHandler} id={item2?.id} allergens={item2?.allergens} />
+
                         </div>
                         {item2?.video != ""  ? (
                           <>
                             {" "}
-                            {/* <video
-                              style={{
-                                position: "fixed",
-                                width: "100%",
-                                height: "100%",
-                                objectFit: "cover",
-                                overflow: "hidden",
-                              }}
-                              loop
-                              muted
-                              autoPlay
-                              playsInline
-                            >
-                              <source
-                                src={
-                                  "https://admin.komandapp.com" +
-                                  item2?.video_path
-                                }
-                                type="video/mp4"
-                              /> 
-                            </video> */}
                             <VideoPlayer 
-                            // S3={S3}
                             active={
                               // index==activeVideo && 
                               catIndex+1 == selectedMenu}

@@ -1,6 +1,5 @@
 import { useEffect, useState,useContext } from "react";
 import { Box, ChakraProvider, flatten, position } from "@chakra-ui/react";
-import { ReactSwipeableViews } from "./Components/ReactSwipeableViews/ReactSwipeableViews";
 
 import Menu from "./Components/Menu";
 import ClipLoader from "react-spinners/ClipLoader";
@@ -12,7 +11,6 @@ import video2 from "./assets/video2.mp4";
 import video3 from "./assets/video3.mp4";
 import video4 from "./assets/video4.mp4";
 import video5 from "./assets/video5.mp4";
-import Discription from "./Components/Discription";
 import BottomBar from "./Components/BottomBar";
 import MySwiper from "./Components/ReactSwipeableViews/swiper";
 import BottomBar2 from "./Components/BottomBar2";
@@ -145,7 +143,6 @@ export default function App() {
                   selectType == 1 ?
                     <div >
                       <MySwiper selectedMenu={selectedMenu} setType={setType} selectType={selectType} setSelectedMenu={changeMenu} videoData={videoData}/>
-                      {/* <ReactSwipeableViews selectedMenu={selectedMenu} setSelectedMenu={changeMenu} selectType={selectType} setType={setType} videoData={videoData} /> */}
                     </div>
                     :
                     <Menu videoData={videoData} setType={setType} />

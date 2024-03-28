@@ -45,7 +45,6 @@ html,body{
 }
 .descriptionExpand{
     bottom: 8dvh;
-    /* padding-bottom: 1dvh !important; */
     height: auto;
     overflow-y: hidden;
 }
@@ -53,7 +52,7 @@ html,body{
 .mobile-responsive{
     width: 100vw;
 }
-.descriptionExpand,.description,.ios-specific-description,.ios-specific-description-expand{
+.descriptionExpand,.description{
     display:flex;
     flex-direction:row;
     z-index:3;
@@ -73,22 +72,18 @@ html,body{
     height: auto;
     overflow-y: hidden;
 }
-@supports (-webkit-appearance: none) {
+/* @supports (-webkit-appearance: none) {
 
     .ios-specific-description{
         bottom: 7dvh;
     }
     .ios-specific-description-expand{
         bottom: 8dvh;
-        /* padding-bottom: 1dvh !important; */
         height: auto;
         overflow-y: hidden;
     }
-  }
-.descriptionInnerExpand{
-    /* bottom:15vh; */
-    /* padding-bottom: 3dvh; */
-}
+  } */
+
 }
 .main-body{
     background: #121212 ;
